@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSPtoNUP — Convert Switch NSP files to NUP</title>
+  <meta name="description" content="NSPtoNUP converts Nintendo Switch NSP files into NUP packages, merging base game, update and DLC into one. Free and open source for macOS, Windows and Linux.">
+  <meta property="og:title" content="NSPtoNUP">
+  <meta property="og:description" content="Convert Nintendo Switch NSP files into NUP packages. Base game, update and DLC merged into one.">
+  <meta property="og:image" content="assets/screenshots/home.jpg">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-ink: #0b0d10;
+      --color-panel: #14171c;
+      --color-line: #262a31;
+      --color-mute: #9aa3ae;
+      --color-accent: #3b82f6;
+      --color-accent-2: #22d3ee;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "PingFang SC", "Noto Sans JP", "Noto Sans SC", Roboto, sans-serif;
+    }
+    @layer components {
+      .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-white font-semibold text-ink transition hover:bg-white/90; }
+      .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 font-semibold text-white transition hover:bg-white/10; }
+      .card { @apply rounded-2xl border border-line bg-panel/80 p-6; }
+      .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-accent-2; }
+      .shot-tab { @apply cursor-pointer rounded-full border border-white/10 px-4 py-2 text-sm text-mute transition hover:text-white; }
+      .shot-tab[aria-selected="true"] { @apply border-white/30 bg-white/10 text-white; }
+      details[open] summary .chevron { @apply rotate-180; }
+    }
+  </style>
+</head>
+<body class="overflow-x-clip bg-ink text-white font-sans antialiased selection:bg-accent/40">
+
+  <!-- Navigation -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 transition">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#" class="flex items-center gap-2.5">
+        <img src="assets/icon.png" alt="" class="size-8 rounded-lg">
+        <span class="text-base font-semibold">NSPtoNUP</span>
+      </a>
+      <div class="hidden items-center gap-7 text-sm text-mute md:flex">
+        <a href="#features" class="hover:text-white" data-i18n="nav_features">Features</a>
+        <a href="#screenshots" class="hover:text-white" data-i18n="nav_screenshots">Screenshots</a>
+        <a href="#download" class="hover:text-white" data-i18n="nav_download">Download</a>
+        <a href="#faq" class="hover:text-white" data-i18n="nav_faq">FAQ</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="sr-only" for="lang" data-i18n="nav_language">Language</label>
+        <select id="lang" class="cursor-pointer rounded-full border border-white/15 bg-ink/60 px-3 py-1.5 text-sm text-white outline-none hover:bg-white/10 focus:ring-2 focus:ring-accent">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh-Hans">简体中文</option>
+        </select>
+        <a href="https://github.com/HereOrCode/Switch-Game-NSPtoNUP" class="hidden rounded-full p-2 text-mute hover:bg-white/10 hover:text-white sm:block" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" class="size-5" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <img src="assets/hero-bg.jpg" alt="" class="size-full object-cover opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/70 to-ink"></div>
+      </div>
+      <div class="mx-auto max-w-6xl px-4 pt-32 pb-16 text-center sm:px-6 sm:pt-40">
+        <img src="assets/icon.png" alt="NSPtoNUP" class="mx-auto mb-6 size-20 rounded-2xl shadow-2xl shadow-accent/20 sm:size-24">
+        <p class="eyebrow" data-i18n="hero_eyebrow">Free &amp; open source · macOS · Windows · Linux</p>
+        <h1 class="mx-auto mt-4 max-w-3xl text-4xl font-bold tracking-tight text-balance sm:text-6xl" data-i18n="hero_title">Turn your Switch NSP files into NUP</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-base text-mute text-pretty sm:text-lg" data-i18n="hero_subtitle">Merge a base game, its update and DLC into a single NUP package. Drop in files or whole folders — NSPtoNUP sorts them out for you.</p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a id="hero-download" href="#download" class="btn-primary px-6 py-3 text-base">
+            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="m7 10 5 5 5-5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>
+            <span id="hero-download-label" data-i18n="hero_download">Download</span>
+          </a>
+          <a href="https://github.com/HereOrCode/Switch-Game-NSPtoNUP" class="btn-ghost px-6 py-3 text-base" data-i18n="hero_source">View on GitHub</a>
+        </div>
+        <p id="hero-version" class="mt-4 h-5 text-sm text-mute"></p>
+        <div class="relative mx-auto mt-14 max-w-5xl">
+          <div class="absolute -inset-2 -z-10 rounded-[2rem] sm:-inset-6 bg-gradient-to-r from-accent/25 via-accent-2/15 to-accent/25 blur-3xl"></div>
+          <img src="assets/screenshots/home.jpg" alt="NSPtoNUP game library" class="w-full rounded-xl border border-white/10 shadow-2xl" width="1600" height="976">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
+      <div class="text-center">
+        <p class="eyebrow" data-i18n="features_eyebrow">Features</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="features_title">Everything a conversion needs</h2>
+      </div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f1_title">Base + Update + DLC</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f1_body">Combine a base game with its latest update and all of its DLC into one NUP.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="m9 13 2 2 4-4"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f2_title">Smart folder import</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f2_body">Add a whole folder: every NSP is identified and grouped by game automatically.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f3_title">Modern update format</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f3_body">Updates in the newer BKTR format are read directly from the NSP — nothing is unpacked first.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f4_title">Game library</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f4_body">Covers fetched automatically, editable game info, and a clear view of what's done, failed or converting.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f5_title">Your keys stay yours</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f5_body">Key files are never copied or uploaded, and key values never appear in command lines or logs.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" class="size-7 text-accent-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          <h3 class="mt-4 font-semibold" data-i18n="f6_title">Native on every desktop</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="f6_body">macOS, Windows and Linux, on Intel/AMD and ARM, in English, Japanese and Simplified Chinese.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots" class="scroll-mt-20 border-y border-line bg-panel/40 py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <p class="eyebrow" data-i18n="shots_eyebrow">Screenshots</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="shots_title">Take a look inside</h2>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-2" role="tablist">
+          <button class="shot-tab" data-shot="queue" data-i18n="shot_queue">Conversion queue</button>
+          <button class="shot-tab" data-shot="editor" data-i18n="shot_editor">Game info</button>
+          <button class="shot-tab" data-shot="settings" data-i18n="shot_settings">Settings</button>
+          <button class="shot-tab" data-shot="home" data-i18n="shot_home">Library</button>
+        </div>
+        <figure class="mx-auto mt-8 max-w-5xl">
+          <img id="shot-image" src="assets/screenshots/queue.jpg" alt="" class="w-full rounded-xl border border-white/10 shadow-2xl transition-opacity duration-300" width="1600" height="976">
+          <figcaption id="shot-caption" class="mt-4 text-center text-sm text-mute"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <div class="text-center">
+        <p class="eyebrow" data-i18n="steps_eyebrow">How it works</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="steps_title">Three steps</h2>
+      </div>
+      <ol class="mt-12 grid gap-5 md:grid-cols-3">
+        <li class="card">
+          <span class="flex size-9 items-center justify-center rounded-full bg-accent/15 font-semibold text-accent">1</span>
+          <h3 class="mt-4 font-semibold" data-i18n="s1_title">Set up your keys</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="s1_body">Choose the prod.keys (and optionally title.keys) dumped from your own console.</p>
+        </li>
+        <li class="card">
+          <span class="flex size-9 items-center justify-center rounded-full bg-accent/15 font-semibold text-accent">2</span>
+          <h3 class="mt-4 font-semibold" data-i18n="s2_title">Add your games</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="s2_body">Add NSP files or a folder. Base games, updates and DLC are grouped together.</p>
+        </li>
+        <li class="card">
+          <span class="flex size-9 items-center justify-center rounded-full bg-accent/15 font-semibold text-accent">3</span>
+          <h3 class="mt-4 font-semibold" data-i18n="s3_title">Convert</h3>
+          <p class="mt-2 text-sm text-mute" data-i18n="s3_body">NUP files are written to Documents/NSPtoNUP, or any folder you choose.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="scroll-mt-20 border-t border-line bg-panel/40 py-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <div class="text-center">
+          <p class="eyebrow" data-i18n="dl_eyebrow">Download</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="dl_title">Get NSPtoNUP</h2>
+          <p id="dl-version" class="mt-3 text-sm text-mute"></p>
+        </div>
+        <div id="dl-list" class="mt-10 grid gap-3">
+          <!-- Rows are filled in by app.js -->
+        </div>
+        <p id="dl-unavailable" class="mt-6 hidden text-center text-sm text-mute" data-i18n="dl_unavailable">The first release is on its way.</p>
+        <p class="mt-6 text-center text-sm text-mute">
+          <a href="https://github.com/HereOrCode/Switch-Game-NSPtoNUP/releases" class="text-accent hover:underline" data-i18n="dl_all_releases">All releases</a>
+          ·
+          <a href="https://github.com/HereOrCode/Switch-Game-NSPtoNUP#building-from-source" class="text-accent hover:underline" data-i18n="dl_build">Build from source</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-3xl scroll-mt-20 px-4 py-20 sm:px-6">
+      <div class="text-center">
+        <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="faq_title">Questions</h2>
+      </div>
+      <div class="mt-10 divide-y divide-line rounded-2xl border border-line bg-panel/60">
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium"><span data-i18n="q1">What is NUP?</span><svg viewBox="0 0 24 24" class="chevron size-4 shrink-0 text-mute transition" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <p class="mt-3 text-sm text-mute" data-i18n="a1">NUP is an unencrypted container format for Nintendo Switch game dumps, created by the nup project. NSPtoNUP reads your NSP files and packs their content into NUP.</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium"><span data-i18n="q2">Does NSPtoNUP include keys or games?</span><svg viewBox="0 0 24 24" class="chevron size-4 shrink-0 text-mute transition" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <p class="mt-3 text-sm text-mute" data-i18n="a2">No. You need your own prod.keys (and optionally title.keys) dumped from your own console, and games you own.</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium"><span data-i18n="q3">macOS says the app can't be opened</span><svg viewBox="0 0 24 24" class="chevron size-4 shrink-0 text-mute transition" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <p class="mt-3 text-sm text-mute" data-i18n="a3">The app is not notarized. The first time, right-click NSPtoNUP.app and choose Open, or allow it in System Settings › Privacy &amp; Security.</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium"><span data-i18n="q4">What are the system requirements?</span><svg viewBox="0 0 24 24" class="chevron size-4 shrink-0 text-mute transition" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <p class="mt-3 text-sm text-mute" data-i18n="a4">macOS 14 or later (Apple silicon); Windows 10 1809 or later with WebView2; Linux with GTK 4.14+ and glibc 2.39 (e.g. Ubuntu 24.04).</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium"><span data-i18n="q5">Is it free?</span><svg viewBox="0 0 24 24" class="chevron size-4 shrink-0 text-mute transition" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <p class="mt-3 text-sm text-mute" data-i18n="a5">Yes. NSPtoNUP is free and open source under the MIT License.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-sm text-mute sm:flex-row sm:px-6">
+      <p>© 2026 NSPtoNUP · <a href="https://github.com/HereOrCode/Switch-Game-NSPtoNUP/blob/main/LICENSE" class="hover:text-white">MIT License</a></p>
+      <p class="text-center sm:text-right" data-i18n="footer_disclaimer">Not affiliated with or endorsed by Nintendo.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

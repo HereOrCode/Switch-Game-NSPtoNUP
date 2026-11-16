@@ -1,0 +1,34 @@
+{
+  "name": "NSPtoNUP",
+  "id": "com.hellomateo.nsptonup",
+  "version": "1.0.0",
+  "build": 1,
+  "rust": ".",
+  "icon": "assets/app-icon.png",
+  "appearance": "dark",
+  "window": {
+    "title": "NSPtoNUP",
+    "defaultSize": {
+      "width": 1180,
+      "height": 720
+    },
+    "minSize": {
+      "width": 860,
+      "height": 560
+    },
+    "titleBar": {
+      "style": "hidden",
+      "height": 32
+    },
+    "defaultPosition": "center"
+  },
+  "fileTypes": [
+    {
+      "name": "NSP",
+      "extensions": [
+        "nsp"
+      ],
+      "role": "viewer"
+    }
+  ]
+}

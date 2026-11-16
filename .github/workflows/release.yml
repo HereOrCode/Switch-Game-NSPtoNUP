@@ -1,0 +1,149 @@
+# Build NSPtoNUP (NSH edition) on every platform and publish a GitHub Release.
+#
+#   push a tag v*      build all platforms, then create a release with the packages attached
+#   run manually       build all platforms and upload the packages as workflow artifacts only
+#
+# The tag must match "version" in NSPtoNUP NSH/nsh.json (tag v1.0.0 ↔ "version": "1.0.0").
+#
+# Each platform builds natively: the app has its own Rust crate, nup is packaged with PyInstaller
+# (no cross-compiling), and nxpatch is built with the .NET SDK (see NSPtoNUP NSH/scripts/fetch-tools.sh).
+
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NSH_VERSION: v0.5.1
+
+defaults:
+  run:
+    working-directory: "NSPtoNUP NSH"
+
+jobs:
+  build:
+    name: ${{ matrix.platform }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-arm64
+            os: macos-15
+            package: NSPtoNUP-macos-arm64.zip
+          - platform: linux-x64
+            os: ubuntu-24.04
+            package: NSPtoNUP-linux-x64.tar.gz
+          - platform: linux-arm64
+            os: ubuntu-24.04-arm
+            package: NSPtoNUP-linux-arm64.tar.gz
+          - platform: windows-x64
+            os: windows-2025
+            package: NSPtoNUP-windows-x64.zip
+          - platform: windows-arm64
+            os: windows-11-arm
+            package: NSPtoNUP-windows-arm64.zip
+    steps:
+      - uses: actions/checkout@v4
+
+      # NSH: pinned release, installed with its official script
+      - name: Install NSH (macOS / Linux)
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          export NSH_INSTALL_DIR="$HOME/.nsh"
+          curl -fsSL "https://github.com/longbridge/nsh/releases/download/${NSH_VERSION}/install.sh" | sh
+          echo "$HOME/.nsh/bin" >> "$GITHUB_PATH"
+
+      - name: Install NSH (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $env:NSH_INSTALL_DIR = Join-Path $env:RUNNER_TEMP 'nsh'
+          Invoke-RestMethod "https://github.com/longbridge/nsh/releases/download/$env:NSH_VERSION/install.ps1" | Invoke-Expression
+          Join-Path $env:NSH_INSTALL_DIR 'bin' | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
+
+      # rust-toolchain.toml pins the version; rustup installs it on first use
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "11.0.x"
+
+      - uses: astral-sh/setup-uv@v6
+
+      # GTK 4 (and WebKitGTK / GStreamer, which the NSH GTK backend links) for the Rust crate
+      - name: Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang libgtk-4-dev libwebkitgtk-6.0-dev \
+            libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+
+      # NSH's QuickJS bindings need libclang on Windows
+      - name: Windows dependencies
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          if (-not (Test-Path 'C:\Program Files\LLVM\bin\libclang.dll')) { choco install llvm -y --no-progress }
+          "LIBCLANG_PATH=C:\Program Files\LLVM\bin" | Out-File -Append -Encoding utf8 $env:GITHUB_ENV
+
+      - name: Build nxpatch and nup
+        shell: bash
+        env:
+          TOOLS_PLATFORM: ${{ matrix.platform }}
+        run: scripts/fetch-tools.sh
+
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        run: scripts/package-macos.sh --zip
+
+      - name: Package (Linux)
+        if: runner.os == 'Linux'
+        run: scripts/package-linux.sh
+
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/package-windows.ps1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.platform }}
+          path: NSPtoNUP NSH/.nsh/out/${{ matrix.package }}
+          if-no-files-found: error
+
+  release:
+    name: Release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag matches nsh.json
+        run: |
+          version="$(jq -r .version 'NSPtoNUP NSH/nsh.json')"
+          [[ "${GITHUB_REF_NAME}" == "v${version}" ]] || { echo "::error::Tag ${GITHUB_REF_NAME} does not match nsh.json version ${version}"; exit 1; }
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          (cd dist && sha256sum * > SHA256SUMS.txt)
+          gh release create "$GITHUB_REF_NAME" dist/* --title "NSPtoNUP ${GITHUB_REF_NAME}" --generate-notes

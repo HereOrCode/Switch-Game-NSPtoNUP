@@ -1,0 +1,376 @@
+[
+  {
+    "titleId": "0100F2C0115B6000",
+    "name": "The Legend of Zelda: Tears of the Kingdom",
+    "publisher": "Nintendo",
+    "size": 17688428544,
+    "releaseDate": 20230512,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/fb30eab428df3fc993b41c76e20f72e4d76d49734d17d31996b5ab61c414b117.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/4b53da7ca4b118fe37c8b8040609b84dc63214d6131c51592486de9bf29ef29c.jpg",
+    "localizedNames": {
+      "ja": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+      "zh-Hant": "薩爾達傳說 王國之淚"
+    }
+  },
+  {
+    "titleId": "01007EF00011E000",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "publisher": "Nintendo",
+    "size": 15479078912,
+    "releaseDate": 20170303,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/d3c210e61e8487200fc4c344987243a60257838187a69a6a81c42d7447d5d192.jpg",
+    "localizedNames": {
+      "ja": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+      "zh-Hant": "薩爾達傳說 曠野之息"
+    }
+  },
+  {
+    "titleId": "0100000000010000",
+    "name": "Super Mario Odyssey",
+    "publisher": "Nintendo",
+    "size": 6023020544,
+    "releaseDate": 20171027,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/ad4d31f664a1ce704f0219da2805f8459595bc3c01c3f04df2e32ba34a05b8c6.jpg",
+    "localizedNames": {
+      "ja": "スーパーマリオ オデッセイ",
+      "zh-Hant": "超級瑪利歐 奧德賽"
+    }
+  },
+  {
+    "titleId": "0100152000022000",
+    "name": "Mario Kart 8 Deluxe",
+    "publisher": "Nintendo",
+    "size": 12082741248,
+    "releaseDate": 20170428,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/55e0720b1a064e28b5df173d30b343ecd91287dc86942f833ffbf979a7a66ec9.jpg",
+    "localizedNames": {
+      "ja": "マリオカート８ デラックス",
+      "zh-Hant": "瑪利歐賽車8 豪華版"
+    }
+  },
+  {
+    "titleId": "01006A800016E000",
+    "name": "Super Smash Bros. Ultimate",
+    "publisher": "Nintendo",
+    "size": 18583912448,
+    "releaseDate": 20181207,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/08af58551a19df2a73ccb36f720388434a1965776b34675c6f69af3f93280330.jpg",
+    "localizedNames": {
+      "ja": "大乱闘スマッシュブラザーズ SPECIAL",
+      "zh-Hant": "任天堂明星大亂鬥 特別版"
+    }
+  },
+  {
+    "titleId": "01006F8002326000",
+    "name": "Animal Crossing: New Horizons",
+    "publisher": "Nintendo",
+    "size": 10956570624,
+    "releaseDate": 20200320,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/4a320d37cd85f49d6e4a675b6d7b82f5ad13ae10b212d5b220fe4208c7d7c2f8.jpg",
+    "localizedNames": {
+      "ja": "あつまれ どうぶつの森",
+      "zh-Hant": "集合啦！動物森友會"
+    }
+  },
+  {
+    "titleId": "0100C2500FC20000",
+    "name": "Splatoon 3",
+    "publisher": "Nintendo",
+    "size": 10597957632,
+    "releaseDate": 20220909,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/94a4095cda06c4d85c637d1af451979f9933302b6b17174d97c45de7a68584a2.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/1a9980faeec7c32f7e3458ad2785e46ceb0324e0325a63ac4499d7d3958abcec.jpg",
+    "localizedNames": {
+      "ja": "スプラトゥーン3",
+      "zh-Hant": "斯普拉遁 3"
+    }
+  },
+  {
+    "titleId": "010015100B514000",
+    "name": "Super Mario Bros. Wonder",
+    "publisher": "Nintendo",
+    "size": 3835691008,
+    "releaseDate": 20231020,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/87e8aa5f1fdc950b88eae7d7c62ed185c8a6373c845090bbdb2e2cf039b38da1.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/bf2fca7eed5ad7ec96d03025907ea52c3efe168e02c8be96e868d8430a247a57.jpg",
+    "localizedNames": {
+      "ja": "スーパーマリオブラザーズ ワンダー",
+      "zh-Hant": "超級瑪利歐兄弟 驚奇"
+    }
+  },
+  {
+    "titleId": "0100B7C00933A000",
+    "name": "Pikmin 4",
+    "publisher": "Nintendo",
+    "size": 11259609088,
+    "releaseDate": 20230721,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/43af89ed5bd76ac5ec6b367b4b53092f8bf94a1d1312fdfc1d4664329fd5077b.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/06471c4bb150ff3f0a75afdaebf9891b0904ceeba003a4e888258c9cacd3c540.jpg",
+    "localizedNames": {
+      "ja": "Pikmin 4 (ピクミン４)",
+      "zh-Hant": "皮克敏４"
+    }
+  },
+  {
+    "titleId": "01004D300C5AE000",
+    "name": "Kirby and the Forgotten Land",
+    "publisher": "Nintendo",
+    "size": 6234832896,
+    "releaseDate": 20220325,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/d1cf83dea46094b85247f40ca30ea4557730a319be0bfe544a4fa929144cf6c2.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/2cbe1b8750ccd744a005beabcf9d2e12a8fb9d0c69a9b06fff66dad064cf138f.jpg",
+    "localizedNames": {
+      "ja": "星のカービィ ディスカバリー",
+      "zh-Hant": "星之卡比 探索發現"
+    }
+  },
+  {
+    "titleId": "010093801237C000",
+    "name": "Metroid Dread",
+    "publisher": "Nintendo",
+    "size": 4591714304,
+    "releaseDate": 20211008,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/4f2c683f0196210ec212a2ab8bf6952223c0b88e827b820953407a2ba61c9cb2.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/924b1b82bc75719dba325773795096359df9e6b4be0de77efa90b0e3039c6fff.jpg",
+    "localizedNames": {
+      "ja": "メトロイド ドレッド",
+      "zh-Hant": "密特羅德 生存恐懼"
+    }
+  },
+  {
+    "titleId": "010074F013262000",
+    "name": "Xenoblade Chronicles 3",
+    "publisher": "Nintendo",
+    "size": 15421407232,
+    "releaseDate": 20220729,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/e933b48650b33b355e9cf2583da5c94b77180e40fb02d050041083dd62f4df39.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/be4402ec6556f50be0ec05ee9745061d69fcd970c5cc6b8aa134cbab9291c07e.jpg",
+    "localizedNames": {
+      "ja": "Xenoblade3 (ゼノブレイド3)",
+      "zh-Hant": "異度神劍3"
+    }
+  },
+  {
+    "titleId": "0100A3D008C5C000",
+    "name": "Pokémon Scarlet",
+    "publisher": "Nintendo",
+    "size": 10672406528,
+    "releaseDate": 20221118,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/849c234de8df7265201d26d9d72f88eed3f32438d3dca12fc135beb4c3befc85.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/fa0f7bba88e0bc9b24cb0a2d1707990a6bc2c59480d22b821114d1a57762fafc.jpg",
+    "localizedNames": {
+      "ja": "ポケットモンスター スカーレット",
+      "zh-Hant": "寶可夢 朱"
+    }
+  },
+  {
+    "titleId": "01001F5010DFA000",
+    "name": "Pokémon Legends: Arceus",
+    "publisher": "Nintendo",
+    "size": 6567231488,
+    "releaseDate": 20220128,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/dcb496d7cf954c7eb51ab2e5d0c27918fb7f055e50f4e902135bd4a70a44b491.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/96acc14bf510d575c210eae08b6372fd5a536dea802da5c0331b39c4c358fe7c.jpg",
+    "localizedNames": {
+      "ja": "Pokémon LEGENDS アルセウス",
+      "zh-Hant": "寶可夢傳說 阿爾宙斯"
+    }
+  },
+  {
+    "titleId": "010055D009F78000",
+    "name": "Fire Emblem: Three Houses",
+    "publisher": "Nintendo",
+    "size": 12402556928,
+    "releaseDate": 20190726,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/c499fdc86779ca95e61daed1f94288a245d196360d278138e56d44097d1a3878.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/11c6f71a52f1ac7282fe02ef9b96e0db42f7f664fc694be5bff744becd79894d.jpg",
+    "localizedNames": {
+      "ja": "ファイアーエムブレム 風花雪月",
+      "zh-Hant": "Fire Emblem 風花雪月"
+    }
+  },
+  {
+    "titleId": "0100DCA0064A6000",
+    "name": "Luigi’s Mansion 3",
+    "publisher": "Nintendo",
+    "size": 7918845952,
+    "releaseDate": 20191031,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/2b166fb3197dacfde1d939acd6a976b9fbe3b1a32c54f9f0d2c8d23efb22412d.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/60601a0a7cd4f96b7b736dd4fe6da14bcefc9f1d3b649084302dcd409618f23f.jpg",
+    "localizedNames": {
+      "ja": "ルイージマンション３",
+      "zh-Hant": "路易吉洋樓３"
+    }
+  },
+  {
+    "titleId": "010028600EBDA000",
+    "name": "Super Mario 3D World + Bowser’s Fury",
+    "publisher": "Nintendo",
+    "size": 3188719616,
+    "releaseDate": 20210212,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/ccb69a8bf2746b2dc0a9b11a9e48c9893baa1631486326f0d681b7a36385221f.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/4b24fd7398f9b569642ed7846edf633456dfbf5f85ae98479eaf5c49a797c4d0.jpg",
+    "localizedNames": {
+      "ja": "スーパーマリオ ３Ｄワールド ＋ フューリーワールド",
+      "zh-Hant": "超級瑪利歐 ３Ｄ世界 ＋ 狂怒世界"
+    }
+  },
+  {
+    "titleId": "010036B0034E4000",
+    "name": "Super Mario Party",
+    "publisher": "Nintendo",
+    "size": 3118465024,
+    "releaseDate": 20181005,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/0ca41128bf40b7e0dc32a046a659ecdc69e4d7cc7a3257d6280be665d2f795b5.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/b200ef18f68bed4e23b7e384700862b23bcb943966e0a040d98174b3e24bb7bd.jpg",
+    "localizedNames": {
+      "ja": "スーパー マリオパーティ"
+    }
+  },
+  {
+    "titleId": "01006FE013472000",
+    "name": "Mario Party Superstars",
+    "publisher": "Nintendo",
+    "size": 3068133376,
+    "releaseDate": 20211029,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/ae43ce2e25afbc4c069c2920075ead01a84f02dfe55b87876268409f6ccc0304.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/22fa52ed91f3cb5cf8ccba24ec495035903a2534ef4020406358c716b7c4e261.jpg",
+    "localizedNames": {
+      "ja": "マリオパーティ スーパースターズ",
+      "zh-Hant": "Mario Party Superstars（瑪利歐派對 超級巨星）"
+    }
+  },
+  {
+    "titleId": "0100C1F0051B6000",
+    "name": "Donkey Kong Country: Tropical Freeze",
+    "publisher": "Nintendo",
+    "size": 7162822656,
+    "releaseDate": 20180504,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/d01cba67eb98fec32ac98027c07fa8d92dd52773565bfadc69f817c860e34b8a.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/1370a702e715506557628f669adc9108529ce211d62eae628954331e26c8fd2e.jpg",
+    "localizedNames": {
+      "ja": "ドンキーコング トロピカルフリーズ",
+      "zh-Hant": "Donkey Kong Tropical Freeze (英日版)"
+    }
+  },
+  {
+    "titleId": "01004A4010FEA000",
+    "name": "Bayonetta 3",
+    "publisher": "Nintendo",
+    "size": 15546187776,
+    "releaseDate": 20221028,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/0c47748b3a6f1b3a9fce87886c3dae2680f9990e27b2b6c8b029b6133f072477.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/fb51186efe9a35471ce3ad80c947c62fbb0c2623f640207e8e9919d7c316248b.jpg",
+    "localizedNames": {
+      "ja": "ベヨネッタ3",
+      "zh-Hant": "蓓優妮塔3"
+    }
+  },
+  {
+    "titleId": "0100B04011742000",
+    "name": "Monster Hunter Rise",
+    "publisher": "CAPCOM",
+    "size": 21228421120,
+    "releaseDate": 20210326,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/b6ca09e9a7f6faf27641f62dabe64c6ff97b4f326aa478379e3c112aa28eb9ab.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/10f565a04c2183b9c9a31365fd7885b991706e7c511e1388d8f1a930504d4edf.jpg",
+    "localizedNames": {}
+  },
+  {
+    "titleId": "01006BB00C6F0000",
+    "name": "The Legend of Zelda: Link’s Awakening",
+    "publisher": "Nintendo",
+    "size": 6326059008,
+    "releaseDate": 20190920,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/df825d5fc6747b66b051f5d3ba6a412fe625ea7878b6a10c93bb8312195682b1.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/b0b0b2d150830b70b5bb259cdabefe21d2009b55cbd58854cf6a897587249054.jpg",
+    "localizedNames": {
+      "ja": "ゼルダの伝説 夢をみる島",
+      "zh-Hant": "薩爾達傳說 織夢島"
+    }
+  },
+  {
+    "titleId": "0100A3900C3E2000",
+    "name": "Paper Mario: The Origami King",
+    "publisher": "Nintendo",
+    "size": 6984564736,
+    "releaseDate": 20200717,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/7f079a1e3927ea4752fb448ea7f2ccbd86933f5483ad9dd6de23ec96ed4df70b.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/0f9b01186ac3e3663853f9be978fa2e9a40d71f15bfa88e3a4512e5f410120f8.jpg",
+    "localizedNames": {
+      "ja": "ペーパーマリオ オリガミキング",
+      "zh-Hant": "紙片瑪利歐：摺紙國王"
+    }
+  },
+  {
+    "titleId": "01007300020FA000",
+    "name": "ASTRAL CHAIN",
+    "publisher": "Nintendo",
+    "size": 10553917440,
+    "releaseDate": 20190830,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/76f381cf2156c793d5f7a9e5c66f4d872b593d2e9d79ed8b84eb9827f32bb655.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/b5d62b0aa33e044693136763637b7c5eb94eb3c0541838e1eee5677dc28933a1.jpg",
+    "localizedNames": {
+      "zh-Hant": "異界鎖鏈"
+    }
+  },
+  {
+    "titleId": "0100535012974000",
+    "name": "Hades",
+    "publisher": "Supergiant Games",
+    "size": 6196035584,
+    "releaseDate": 20200917,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/dbc8c55a21688b446a5c57711b726956483a14ef8c5ddb861f897c0595ccb6b5.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/ffb4843fac25d064a2d461e1c285d1face4caca8c7d6e817904e3ed12cc7c777.jpg",
+    "localizedNames": {
+      "ja": "HADES"
+    }
+  },
+  {
+    "titleId": "0100633007D48000",
+    "name": "Hollow Knight",
+    "publisher": "Team Cherry",
+    "size": 5686427648,
+    "releaseDate": 20180612,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/4643fb058642335c523910f3a7910575f56372f612f7c0c9a497aaae978d3e51.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/91540557d07599fd6b8d63e544320fc682e71ec8d30f2b7c3d13568af18323be.jpg",
+    "localizedNames": {
+      "ja": "Hollow Knight（ホロウナイト）"
+    }
+  },
+  {
+    "titleId": "01002B30028F6000",
+    "name": "Celeste",
+    "publisher": "Maddy Makes Games",
+    "size": 1654652928,
+    "releaseDate": 20180125,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/691ba3e0801180a9864cc8a7694b6f98097f9d9799bc7e3dc6db92f086759252.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/64a18f84f1ff5bdcf5ccfe4c89a8b1fc4642d8afc281001cc62b36f0396aef4b.jpg",
+    "localizedNames": {}
+  },
+  {
+    "titleId": "0100E65002BB8000",
+    "name": "Stardew Valley",
+    "publisher": "ConcernedApe",
+    "size": 1740636160,
+    "releaseDate": 20171005,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/7aa9c6cf5e7d4cecf481f18b1d7a9d79e7aab85045b22203effb2dda409bc5b7.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/2c2d14a11ac7ee9439cfc88449360d238db52cedd921ac31309eea04053c08e7.jpg",
+    "localizedNames": {}
+  },
+  {
+    "titleId": "0100A5C00D162000",
+    "name": "Cuphead",
+    "publisher": "StudioMDHR",
+    "size": 3814719488,
+    "releaseDate": 20190418,
+    "bannerUrl": "https://img-eshop.cdn.nintendo.net/i/d94d2186ef03c930392253c83c84af0c73b7e57cd902a526b09b4155a25930fe.jpg",
+    "iconUrl": "https://img-eshop.cdn.nintendo.net/i/139836b3193bb50dab4982ac706d5d5d148fb7cc34ff3c6c21c34cdefa4f5df7.jpg",
+    "localizedNames": {}
+  }
+]

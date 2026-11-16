@@ -1,0 +1,1678 @@
+# NSPtoNUP (NSH edition) interface text: English, Japanese, Simplified Chinese.
+# Keys are flat snake_case; parameters are written %{1}, %{2}, … (substituted in order by L() in ui/i18n.ts);
+# English singular forms get an extra key_one. English is shown when a language is missing.
+_version: 2
+
+action_add:
+  en: "Add"
+  ja: "追加"
+  zh-Hans: "添加"
+action_add_ellipsis:
+  en: "Add…"
+  ja: "追加…"
+  zh-Hans: "添加…"
+action_cancel:
+  en: "Cancel"
+  ja: "キャンセル"
+  zh-Hans: "取消"
+action_cancel_all:
+  en: "Cancel All"
+  ja: "すべてキャンセル"
+  zh-Hans: "全部取消"
+action_change:
+  en: "Change…"
+  ja: "変更…"
+  zh-Hans: "更改…"
+action_choose:
+  en: "Choose"
+  ja: "選択"
+  zh-Hans: "选择"
+action_convert:
+  en: "Convert"
+  ja: "変換"
+  zh-Hans: "转换"
+action_delete:
+  en: "Delete"
+  ja: "削除"
+  zh-Hans: "删除"
+action_done:
+  en: "Done"
+  ja: "完了"
+  zh-Hans: "完成"
+action_quit:
+  en: "Quit"
+  ja: "終了"
+  zh-Hans: "退出"
+action_reconvert:
+  en: "Convert Again"
+  ja: "再変換"
+  zh-Hans: "重新转换"
+action_remove:
+  en: "Remove"
+  ja: "削除"
+  zh-Hans: "移除"
+action_remove_cover:
+  en: "Remove Cover"
+  ja: "カバーを削除"
+  zh-Hans: "移除封面"
+action_retry:
+  en: "Retry"
+  ja: "再試行"
+  zh-Hans: "重试"
+action_reveal_in_finder:
+  en: "Show in Finder"
+  ja: "Finder に表示"
+  zh-Hans: "在 Finder 中显示"
+action_save:
+  en: "Save"
+  ja: "保存"
+  zh-Hans: "保存"
+action_skip:
+  en: "Skip"
+  ja: "スキップ"
+  zh-Hans: "跳过"
+action_stop_all:
+  en: "Stop All"
+  ja: "すべて中止"
+  zh-Hans: "全部停止"
+action_stop_conversion:
+  en: "Stop Converting"
+  ja: "変換を中止"
+  zh-Hans: "停止转换"
+add_counter:
+  en: "%{1} of %{2}"
+  ja: "%{1} / %{2}"
+  zh-Hans: "第 %{1} / %{2} 个"
+add_game_title:
+  en: "Add Game"
+  ja: "ゲームを追加"
+  zh-Hans: "添加游戏"
+add_panel_message:
+  en: "Choose NSP files or folders that contain them (multiple allowed; base games, updates and DLC are detected automatically)"
+  ja: "NSP ファイル、または NSP を含むフォルダを選択してください（複数選択可。ゲーム本体・アップデート・DLC を自動で識別します）"
+  zh-Hans: "选择 NSP 文件或包含 NSP 的文件夹（可多选，自动识别本体、更新与 DLC）"
+add_panel_prompt:
+  en: "Add"
+  ja: "追加"
+  zh-Hans: "添加"
+add_status_failed:
+  en: "Couldn't read: %{1}"
+  ja: "読み込めません：%{1}"
+  zh-Hans: "无法读取：%{1}"
+add_status_no_keys:
+  en: "No prod.keys: the game is added by file name; info is read once prod.keys is set up"
+  ja: "prod.keys が未設定です：ファイル名で追加し、設定後にゲーム情報を自動で読み込みます"
+  zh-Hans: "未配置 prod.keys：先按文件名添加，配置后自动读取游戏信息"
+add_status_reading:
+  en: "Reading game info…"
+  ja: "ゲーム情報を読み込み中…"
+  zh-Hans: "正在读取游戏信息…"
+add_status_ready:
+  en: "Check the game info. You can edit it here."
+  ja: "ゲーム情報を確認してください。ここで編集できます"
+  zh-Hans: "请确认游戏信息，可以直接修改"
+carousel_add_tooltip:
+  en: "Add NSP (or drag files into the window)"
+  ja: "NSP を追加（ファイルをウインドウにドラッグすることもできます）"
+  zh-Hans: "添加 NSP（也可以把文件拖进窗口）"
+carousel_next:
+  en: "Next (→)"
+  ja: "次へ（→）"
+  zh-Hans: "下一个（→）"
+carousel_previous:
+  en: "Previous (←)"
+  ja: "前へ（←）"
+  zh-Hans: "上一个（←）"
+category_all:
+  en: "All"
+  ja: "すべて"
+  zh-Hans: "全部"
+category_converting:
+  en: "Converting"
+  ja: "変換中"
+  zh-Hans: "转换中"
+category_done:
+  en: "Done"
+  ja: "完了"
+  zh-Hans: "已完成"
+category_failed:
+  en: "Failed"
+  ja: "失敗"
+  zh-Hans: "失败"
+confirm_reconvert_message:
+  en: "The existing NUP for “%{1}” will be overwritten."
+  ja: "“%{1}”の既存の NUP ファイルは上書きされます。"
+  zh-Hans: "“%{1}”已有的 NUP 文件会被覆盖。"
+confirm_reconvert_title:
+  en: "Convert Again?"
+  ja: "再変換しますか？"
+  zh-Hans: "要重新转换吗？"
+confirm_remove_cover_message:
+  en: "The NUP converted from “%{1}” will have no icon. You can download or choose an image again later."
+  ja: "“%{1}”から変換した NUP にはアイコンが含まれません。あとで再ダウンロードや画像の選択ができます。"
+  zh-Hans: "“%{1}”转换出的 NUP 将不含图标，之后可以重新下载或选择图片。"
+confirm_remove_cover_title:
+  en: "Remove the Cover?"
+  ja: "カバーを削除しますか？"
+  zh-Hans: "要移除封面吗？"
+confirm_stop_all_running:
+  en: "“%{1}”, which is being converted, will be stopped."
+  ja: "変換中の“%{1}”は中止されます。"
+  zh-Hans: "正在转换的“%{1}”会被中止。"
+confirm_stop_all_title:
+  en: "Stop All Conversions?"
+  ja: "すべての変換を中止しますか？"
+  zh-Hans: "要停止全部转换吗？"
+confirm_stop_all_waiting:
+  en: "%{1} queued games will be removed from the queue."
+  ja: "待機中の %{1} 本のゲームはキューから外されます。"
+  zh-Hans: "排队中的 %{1} 个游戏会移出队列。"
+confirm_stop_all_waiting_one:
+  en: "1 queued game will be removed from the queue."
+confirm_stop_message:
+  en: "Progress on “%{1}” won't be kept; the next conversion starts from the beginning."
+  ja: "“%{1}”の完了した手順は保存されず、次回は最初から変換します。"
+  zh-Hans: "“%{1}”已完成的步骤不会保留，下次需要从头开始。"
+confirm_stop_title:
+  en: "Stop Converting?"
+  ja: "変換を中止しますか？"
+  zh-Hans: "要停止转换吗？"
+content_dlc_count:
+  en: "%{1} DLC"
+  ja: "DLC %{1} 個"
+  zh-Hans: "%{1} 个 DLC"
+content_kind_base:
+  en: "Base"
+  ja: "本体"
+  zh-Hans: "本体"
+content_kind_dlc:
+  en: "DLC"
+  ja: "DLC"
+  zh-Hans: "DLC"
+content_kind_update:
+  en: "Update"
+  ja: "アップデート"
+  zh-Hans: "更新"
+content_revision:
+  en: "Revision %{1}"
+  ja: "リビジョン %{1}"
+  zh-Hans: "版本 %{1}"
+contents_cannot_add_title:
+  en: "Can't Add"
+  ja: "追加できません"
+  zh-Hans: "无法添加"
+contents_empty:
+  en: "No updates or DLC. You can add NSP files or folders that contain them."
+  ja: "アップデートや DLC はありません。NSP ファイル、またはそれを含むフォルダを追加できます。"
+  zh-Hans: "没有更新或 DLC。可以添加 NSP 文件或包含它们的文件夹。"
+contents_file_missing:
+  en: " (file missing)"
+  ja: "（ファイルがありません）"
+  zh-Hans: "（文件不存在）"
+contents_identifying:
+  en: "Identifying…"
+  ja: "識別中…"
+  zh-Hans: "正在识别…"
+contents_need_keys:
+  en: "Set up prod.keys first to identify updates and DLC."
+  ja: "アップデートや DLC を識別するには、先に prod.keys を設定してください。"
+  zh-Hans: "识别更新与 DLC 需要先配置 prod.keys。"
+contents_no_title_id:
+  en: "This game's title ID hasn't been read yet, so updates and DLC can't be matched to it."
+  ja: "このゲームの Title ID がまだ読み込まれていないため、アップデートや DLC が属するか判断できません。"
+  zh-Hans: "这个游戏还没有读取到 Title ID，无法判断更新与 DLC 是否属于它。"
+contents_not_added_title:
+  en: "%{1} files weren't added"
+  ja: "%{1} 個のファイルを追加できませんでした"
+  zh-Hans: "有 %{1} 个文件未添加"
+contents_not_added_title_one:
+  en: "1 file wasn't added"
+contents_panel_message:
+  en: "Choose updates or DLC for this game (NSP files or folders that contain them)"
+  ja: "このゲームのアップデートまたは DLC を選択してください（NSP ファイル、またはそれを含むフォルダ）"
+  zh-Hans: "选择这个游戏的更新或 DLC（NSP 文件或包含它们的文件夹）"
+contents_remove_tooltip:
+  en: "Remove from this game (the file isn't deleted)"
+  ja: "このゲームから外します（ファイルは削除されません）"
+  zh-Hans: "从这个游戏中移除（不删除文件）"
+contents_skip_is_base:
+  en: "This is a base game"
+  ja: "これはゲーム本体です"
+  zh-Hans: "这是游戏本体"
+contents_skip_line:
+  en: "%{1}: %{2}"
+  ja: "%{1}：%{2}"
+  zh-Hans: "%{1}：%{2}"
+contents_skip_other_game:
+  en: "Belongs to another game (%{1})"
+  ja: "このゲームのものではありません（%{1}）"
+  zh-Hans: "不属于这个游戏（%{1}）"
+count_files:
+  en: "%{1} files"
+  ja: "%{1} 個のファイル"
+  zh-Hans: "%{1} 个文件"
+count_files_one:
+  en: "1 file"
+count_games:
+  en: "%{1} games"
+  ja: "%{1} 本のゲーム"
+  zh-Hans: "%{1} 个游戏"
+count_games_one:
+  en: "1 game"
+cover_change_menu:
+  en: "Change Cover"
+  ja: "カバーを変更"
+  zh-Hans: "更换封面"
+cover_drop_hint:
+  en: "Drop an image here to change the cover"
+  ja: "画像をドロップしてカバーを変更"
+  zh-Hans: "拖入图片更换封面"
+cover_menu_choose:
+  en: "Choose Image…"
+  ja: "画像を選択…"
+  zh-Hans: "选择图片…"
+cover_menu_redownload:
+  en: "Download Again"
+  ja: "再ダウンロード"
+  zh-Hans: "重新下载"
+cover_panel_message:
+  en: "Choose a 16:9 cover image (other aspect ratios are cropped to the center)"
+  ja: "16:9 のカバー画像を選択してください（ほかの比率は中央でトリミングされます）"
+  zh-Hans: "选择一张 16:9 的封面图（其他比例会自动居中裁剪）"
+cover_panel_prompt:
+  en: "Use Image"
+  ja: "この画像を使用"
+  zh-Hans: "使用图片"
+cover_status_downloaded:
+  en: "Cover: downloaded automatically"
+  ja: "カバー：自動で取得"
+  zh-Hans: "封面：自动获取"
+cover_status_downloading:
+  en: "Downloading cover…"
+  ja: "カバーをダウンロード中…"
+  zh-Hans: "正在下载封面…"
+cover_status_manual:
+  en: "Cover: added manually"
+  ja: "カバー：手動で追加"
+  zh-Hans: "封面：手动添加"
+cover_status_new_pending:
+  en: "Cover: new image (applies when saved)"
+  ja: "カバー：新しい画像（保存後に反映）"
+  zh-Hans: "封面：新图片（保存后生效）"
+cover_status_none:
+  en: "No cover · the NUP will have no icon"
+  ja: "カバーなし · NUP にアイコンは含まれません"
+  zh-Hans: "没有封面 · NUP 将不含图标"
+cover_status_reading:
+  en: "Reading…"
+  ja: "読み込み中…"
+  zh-Hans: "正在读取…"
+cover_status_redownload_pending:
+  en: "Cover: downloaded again (applies when saved)"
+  ja: "カバー：再ダウンロード（保存後に反映）"
+  zh-Hans: "封面：重新下载（保存后生效）"
+cover_status_remove_pending:
+  en: "The cover will be removed (applies when saved)"
+  ja: "カバーは削除されます（保存後に反映）"
+  zh-Hans: "封面将被移除（保存后生效）"
+delete_kind_count:
+  en: "%{1} %{2}"
+  ja: "%{2} %{1} 個"
+  zh-Hans: "%{1} 个 %{2}"
+delete_message:
+  en: "“%{1}” will be removed from the list."
+  ja: "“%{1}”はリストから削除されます。"
+  zh-Hans: "“%{1}”将从列表中删除。"
+delete_move_to_trash:
+  en: "Also move the %{1} files to the Trash"
+  ja: "%{1} ファイルもゴミ箱に入れる"
+  zh-Hans: "同时将 %{1} 文件移到废纸篓"
+delete_title:
+  en: "Delete This Game?"
+  ja: "このゲームを削除しますか？"
+  zh-Hans: "要删除这个游戏吗？"
+duration_hours_minutes:
+  en: "About %{1} h %{2} min"
+  ja: "約 %{1} 時間 %{2} 分"
+  zh-Hans: "约 %{1} 小时 %{2} 分钟"
+duration_minutes:
+  en: "About %{1} minutes"
+  ja: "約 %{1} 分"
+  zh-Hans: "约 %{1} 分钟"
+duration_minutes_one:
+  en: "About 1 minute"
+duration_under_minute:
+  en: "Less than a minute"
+  ja: "1 分未満"
+  zh-Hans: "不到 1 分钟"
+edit_game_title:
+  en: "Edit Game Info"
+  ja: "ゲーム情報を編集"
+  zh-Hans: "编辑游戏信息"
+edit_locked_converting:
+  en: "Converting. You can edit after it finishes."
+  ja: "変換中です。完了後に編集できます"
+  zh-Hans: "正在转换，完成后才能编辑"
+empty_action_clear_search:
+  en: "Clear Search"
+  ja: "検索をクリア"
+  zh-Hans: "清除搜索"
+empty_action_show_all:
+  en: "Show All"
+  ja: "すべて表示"
+  zh-Hans: "查看全部"
+empty_all_message:
+  en: "Drag .nsp files into the window to add them."
+  ja: ".nsp ファイルをウインドウにドラッグすると追加できます。"
+  zh-Hans: "把 .nsp 文件拖进窗口即可添加。"
+empty_all_title:
+  en: "No Games"
+  ja: "ゲームがありません"
+  zh-Hans: "没有游戏"
+empty_converting_all_done:
+  en: "All games have been processed"
+  ja: "すべてのゲームを処理しました"
+  zh-Hans: "所有游戏都已处理"
+empty_converting_message:
+  en: "Choose a game in All to start converting, or convert them all at once."
+  ja: "「すべて」でゲームを選んで変換を始めるか、まとめて変換してください。"
+  zh-Hans: "在“全部”中选择游戏开始转换，或一次转换全部。"
+empty_converting_pending:
+  en: "%{1} games are waiting to be converted"
+  ja: "変換待ちのゲームが %{1} 本あります"
+  zh-Hans: "还有 %{1} 个游戏待转换"
+empty_converting_pending_one:
+  en: "1 game is waiting to be converted"
+empty_converting_title:
+  en: "Nothing Is Converting"
+  ja: "変換中のゲームはありません"
+  zh-Hans: "当前没有正在转换的游戏"
+empty_done_message:
+  en: "Converted NUP files appear here."
+  ja: "変換が完了した NUP はここに表示されます。"
+  zh-Hans: "转换完成的 NUP 会显示在这里。"
+empty_done_title:
+  en: "No Converted Games Yet"
+  ja: "変換が完了したゲームはまだありません"
+  zh-Hans: "还没有转换完成的游戏"
+empty_failed_message:
+  en: "Games that failed to convert or couldn't be read appear here."
+  ja: "変換に失敗したゲームや読み込めないゲームはここに表示されます。"
+  zh-Hans: "转换失败或无法读取的游戏会显示在这里。"
+empty_failed_title:
+  en: "No Failed Conversions"
+  ja: "失敗した変換はありません"
+  zh-Hans: "没有失败的转换"
+empty_search_message:
+  en: "Try a game name, a localized name or a title ID."
+  ja: "ゲーム名、ローカライズ名、または Title ID で試してください。"
+  zh-Hans: "试试游戏名称、本地化名称或 Title ID。"
+empty_search_status:
+  en: "%{1} · 0 results"
+  ja: "%{1} · 0 件"
+  zh-Hans: "%{1} · 0 个结果"
+empty_search_title:
+  en: "No Results for “%{1}”"
+  ja: "“%{1}”は見つかりません"
+  zh-Hans: "没有找到“%{1}”"
+error_control_failed:
+  en: "Couldn't read game info"
+  ja: "ゲーム情報を読み込めません"
+  zh-Hans: "读取游戏信息失败"
+error_cover_download_choose_hint:
+  en: "%{1}\nYou can choose a local image, or drag one onto the cover."
+  ja: "%{1}\nローカルの画像を選択するか、カバーにドラッグしてください。"
+  zh-Hans: "%{1}\n你可以选择本地图片，或把图片拖到封面上。"
+error_cover_download_drag_hint:
+  en: "%{1}\nYou can drag a local image onto the cover."
+  ja: "%{1}\nローカルの画像をカバーにドラッグすることもできます。"
+  zh-Hans: "%{1}\n你可以把一张本地图片拖到封面上。"
+error_cover_download_title:
+  en: "Couldn't Get the Cover"
+  ja: "カバーを取得できませんでした"
+  zh-Hans: "自动获取封面失败"
+error_cover_not_in_library:
+  en: "No cover for this game was found in the image library"
+  ja: "画像ライブラリにこのゲームのカバーが見つかりません"
+  zh-Hans: "图库中没有找到这个游戏的封面"
+error_cover_save_title:
+  en: "Couldn't Save the Cover"
+  ja: "カバーを保存できませんでした"
+  zh-Hans: "无法保存封面"
+error_cover_write:
+  en: "Couldn't write the cover file"
+  ja: "カバーファイルを書き込めません"
+  zh-Hans: "无法写入封面文件"
+error_disk_space:
+  en: "Not enough disk space: about %{1} needed, %{2} available"
+  ja: "ディスクの空き容量が不足しています：約 %{1} 必要、空き %{2}"
+  zh-Hans: "磁盘空间不足：需要约 %{1}，当前可用 %{2}"
+error_exefs_main_missing:
+  en: "exefs/main wasn't found after extraction. Make sure prod.keys matches the game version."
+  ja: "抽出後に exefs/main が見つかりません。prod.keys がゲームのバージョンに合っているか確認してください。"
+  zh-Hans: "提取后没有找到 exefs/main，请确认 prod.keys 与游戏版本匹配"
+error_extract_failed:
+  en: "Extraction failed"
+  ja: "抽出に失敗しました"
+  zh-Hans: "提取失败"
+error_generic_title:
+  en: "Something went wrong"
+  ja: "エラーが発生しました"
+  zh-Hans: "出错了"
+error_image_unreadable:
+  en: "Couldn't read the image"
+  ja: "画像を読み込めません"
+  zh-Hans: "无法读取图片"
+error_image_unusable_title:
+  en: "This Image Can't Be Used"
+  ja: "この画像は使用できません"
+  zh-Hans: "无法使用这张图片"
+error_is_dlc_add_base:
+  en: "This is DLC (%{1}). Add the base game instead."
+  ja: "これは DLC です（%{1}）。ゲーム本体を追加してください。"
+  zh-Hans: "这是 DLC（%{1}），请添加游戏本体"
+error_is_update_add_base:
+  en: "This is an update (%{1}). Add the base game instead."
+  ja: "これはアップデートです（%{1}）。ゲーム本体を追加してください。"
+  zh-Hans: "这是更新补丁（%{1}），请添加游戏本体"
+error_keys_file_unrecognized:
+  en: "No keys were found in the file. Make sure you chose prod.keys or title.keys."
+  ja: "ファイルにキーが見つかりません。prod.keys または title.keys を選択したか確認してください。"
+  zh-Hans: "没有在文件中找到任何 key，请确认选择的是 prod.keys 或 title.keys。"
+error_keys_incomplete_title:
+  en: "prod.keys Is Incomplete"
+  ja: "prod.keys が不完全です"
+  zh-Hans: "prod.keys 不完整"
+error_keys_missing_names:
+  en: "This file is missing: %{1}"
+  ja: "このファイルには次がありません：%{1}"
+  zh-Hans: "这个文件缺少：%{1}"
+error_keys_not_configured:
+  en: "No valid prod.keys is configured"
+  ja: "有効な prod.keys が設定されていません"
+  zh-Hans: "尚未配置有效的 prod.keys"
+error_keys_unusable:
+  en: "prod.keys can't be used: %{1}"
+  ja: "prod.keys を使用できません：%{1}"
+  zh-Hans: "prod.keys 无法使用：%{1}"
+error_keys_unusable_title:
+  en: "This prod.keys Can't Be Used"
+  ja: "この prod.keys は使用できません"
+  zh-Hans: "无法使用这个 prod.keys"
+error_nacp_size:
+  en: "control.nacp has an unexpected size"
+  ja: "control.nacp のサイズが正しくありません"
+  zh-Hans: "control.nacp 大小异常"
+error_no_nsp_found_message:
+  en: "There are no NSP files in the selected location."
+  ja: "選択した場所に NSP ファイルがありません。"
+  zh-Hans: "所选位置中没有 NSP 文件。"
+error_no_nsp_found_title:
+  en: "No NSP Files Found"
+  ja: "NSP ファイルが見つかりません"
+  zh-Hans: "没有找到 NSP 文件"
+error_no_title_id_configure_keys:
+  en: "The title ID hasn't been read yet. Set up prod.keys first."
+  ja: "Title ID をまだ読み込んでいません。先に prod.keys を設定してください。"
+  zh-Hans: "还没有读取到 Title ID，请先配置 prod.keys"
+error_nsp_missing:
+  en: "NSP file not found: %{1}"
+  ja: "NSP ファイルが見つかりません：%{1}"
+  zh-Hans: "找不到 NSP 文件：%{1}"
+error_nsp_missing_multiline:
+  en: "NSP file not found:\n%{1}"
+  ja: "NSP ファイルが見つかりません：\n%{1}"
+  zh-Hans: "找不到 NSP 文件：\n%{1}"
+error_nsp_unreadable:
+  en: "Couldn't read the NSP"
+  ja: "NSP を読み込めません"
+  zh-Hans: "无法读取 NSP"
+error_nsp_unrecognized:
+  en: "Couldn't identify this NSP"
+  ja: "この NSP を識別できません"
+  zh-Hans: "无法识别这个 NSP"
+error_pack_failed:
+  en: "nup pack failed"
+  ja: "nup のパックに失敗しました"
+  zh-Hans: "nup 打包失败"
+error_probe_is_dlc:
+  en: "This is DLC (%{1}). Add the base game; the DLC will be attached to it automatically."
+  ja: "これは DLC です（%{1}）。ゲーム本体を追加すると、DLC は自動的に本体にまとめられます。"
+  zh-Hans: "这是 DLC（%{1}），请添加游戏本体，DLC 会自动归到本体下"
+error_probe_is_update:
+  en: "This is an update (%{1}). Add the base game; the update will be attached to it automatically."
+  ja: "これはアップデートです（%{1}）。ゲーム本体を追加すると、アップデートは自動的に本体にまとめられます。"
+  zh-Hans: "这是更新补丁（%{1}），请添加游戏本体，更新会自动归到本体下"
+error_too_many_nsps:
+  en: "Found %{1} NSP files. You can add up to %{2} at a time. Choose a smaller folder."
+  ja: "%{1} 個の NSP が見つかりました。一度に追加できるのは %{2} 個までです。もっと小さなフォルダを選択してください。"
+  zh-Hans: "找到 %{1} 个 NSP，一次最多添加 %{2} 个。请选择更小的文件夹。"
+error_too_many_nsps_title:
+  en: "Too Many Files"
+  ja: "ファイルが多すぎます"
+  zh-Hans: "文件太多"
+error_tool_launch:
+  en: "Couldn't start %{1}: %{2}"
+  ja: "%{1} を起動できません：%{2}"
+  zh-Hans: "无法启动 %{1}：%{2}"
+error_tool_missing:
+  en: "Bundled tool not found: %{1}"
+  ja: "内蔵ツールが見つかりません：%{1}"
+  zh-Hans: "找不到内置工具：%{1}"
+error_unknown:
+  en: "Unknown error"
+  ja: "不明なエラー"
+  zh-Hans: "未知错误"
+error_unrecognized_title:
+  en: "Unrecognized File"
+  ja: "認識できません"
+  zh-Hans: "无法识别"
+error_verify_failed:
+  en: "NUP verification failed"
+  ja: "NUP の検証に失敗しました"
+  zh-Hans: "NUP 校验失败"
+field_name_label:
+  en: "Name:"
+  ja: "名前："
+  zh-Hans: "名称："
+field_name_placeholder:
+  en: "Game name"
+  ja: "ゲーム名"
+  zh-Hans: "游戏名称"
+field_publisher_label:
+  en: "Publisher:"
+  ja: "発売元："
+  zh-Hans: "发行商："
+field_publisher_placeholder:
+  en: "Publisher"
+  ja: "発売元"
+  zh-Hans: "发行商"
+field_version_label:
+  en: "Version:"
+  ja: "バージョン："
+  zh-Hans: "版本："
+field_version_placeholder:
+  en: "e.g. 1.0.0"
+  ja: "例：1.0.0"
+  zh-Hans: "例如 1.0.0"
+home_action_delete:
+  en: "Delete Game"
+  ja: "ゲームを削除"
+  zh-Hans: "删除游戏"
+home_action_reading:
+  en: "Reading"
+  ja: "読み込み中"
+  zh-Hans: "读取中"
+home_add_keys:
+  en: "Add prod.keys…"
+  ja: "prod.keys を追加…"
+  zh-Hans: "添加 prod.keys…"
+home_add_message:
+  en: "Game info is read first so you can check it before the game is added to the library."
+  ja: "追加する前にゲーム情報を読み込み、確認してからライブラリに追加します。"
+  zh-Hans: "添加前会先读取游戏信息，确认无误后再加入游戏库。"
+home_add_status:
+  en: "Choose NSP files, or drag them into the window"
+  ja: "NSP ファイルを選択するか、ウインドウにドラッグしてください"
+  zh-Hans: "选择 NSP 文件，或直接拖进窗口"
+home_add_tooltip:
+  en: "Add NSP (⌘O)"
+  ja: "NSP を追加（⌘O）"
+  zh-Hans: "添加 NSP（⌘O）"
+home_category_tooltip:
+  en: "%{1} (⌘%{2})"
+  ja: "%{1}（⌘%{2}）"
+  zh-Hans: "%{1}（⌘%{2}）"
+home_edit_tooltip:
+  en: "Edit Info (⌘I)"
+  ja: "情報を編集（⌘I）"
+  zh-Hans: "编辑信息（⌘I）"
+home_keys_configured:
+  en: "prod.keys is set up"
+  ja: "prod.keys は設定済みです"
+  zh-Hans: "prod.keys 已配置"
+home_keys_not_configured:
+  en: "prod.keys isn't set up yet. Click to add it."
+  ja: "prod.keys が未設定です。クリックして追加してください"
+  zh-Hans: "尚未配置 prod.keys，点击添加"
+home_keys_tooltip:
+  en: "prod.keys (not included; add your own)"
+  ja: "prod.keys（App には含まれません。各自で追加してください）"
+  zh-Hans: "prod.keys（App 不提供，需自行添加）"
+home_log_tooltip:
+  en: "Conversion Log"
+  ja: "変換ログ"
+  zh-Hans: "转换日志"
+home_message_contents_changed:
+  en: "Updates or DLC changed. Convert again to include them in the NUP."
+  ja: "アップデートまたは DLC が変更されました。NUP に含めるには再変換してください。"
+  zh-Hans: "更新或 DLC 有变化，重新转换后才会包含在 NUP 中。"
+home_message_no_cover:
+  en: "No cover: the NUP will have no icon. Click Edit to add one."
+  ja: "カバーがありません：NUP にアイコンは含まれません。「編集」からカバーを追加できます。"
+  zh-Hans: "没有封面：NUP 将不含图标。可点“编辑”添加封面。"
+home_more_tooltip:
+  en: "More Actions"
+  ja: "その他の操作"
+  zh-Hans: "更多操作"
+home_queue_tooltip:
+  en: "Conversion Queue (⌘J)"
+  ja: "変換キュー（⌘J）"
+  zh-Hans: "转换队列（⌘J）"
+home_remaining:
+  en: "%{1} left"
+  ja: "残り %{1}"
+  zh-Hans: "剩余%{1}"
+home_search_placeholder:
+  en: "Search by name or title ID"
+  ja: "名前または Title ID で検索"
+  zh-Hans: "搜索名称或 Title ID"
+home_search_tooltip:
+  en: "Search (⌘F)"
+  ja: "検索（⌘F）"
+  zh-Hans: "搜索（⌘F）"
+home_settings_tooltip:
+  en: "Settings (⌘,)"
+  ja: "設定（⌘,）"
+  zh-Hans: "设置（⌘,）"
+home_status_converting:
+  en: "Converting · %{1}"
+  ja: "変換中 · %{1}"
+  zh-Hans: "正在转换 · %{1}"
+home_status_done:
+  en: "Done · %{1}"
+  ja: "完了 · %{1}"
+  zh-Hans: "已完成 · %{1}"
+home_status_pending:
+  en: "Not started · %{1}"
+  ja: "未変換 · %{1}"
+  zh-Hans: "未开始 · %{1}"
+home_status_preparing:
+  en: "Preparing"
+  ja: "準備中"
+  zh-Hans: "准备中"
+home_status_reading:
+  en: "Reading game info… · %{1}"
+  ja: "ゲーム情報を読み込み中… · %{1}"
+  zh-Hans: "正在读取游戏信息… · %{1}"
+home_status_step:
+  en: "Step %{1}/%{2} · %{3}"
+  ja: "ステップ %{1}/%{2} · %{3}"
+  zh-Hans: "第 %{1}/%{2} 步 · %{3}"
+home_status_unreadable:
+  en: "Unreadable"
+  ja: "読み込めません"
+  zh-Hans: "无法读取"
+home_status_waiting:
+  en: "Waiting · %{1}"
+  ja: "待機中 · %{1}"
+  zh-Hans: "等待转换 · %{1}"
+home_welcome_keys_step:
+  en: "Step 1: Add your own prod.keys (not included)"
+  ja: "ステップ 1：自分の prod.keys を追加してください（App には含まれません）"
+  zh-Hans: "第一步：添加你自己的 prod.keys（App 不提供）"
+home_welcome_message:
+  en: "Drag .nsp files into the window, or click Add NSP. Everything is converted on this Mac. Only convert games you legally own."
+  ja: ".nsp ファイルをウインドウにドラッグするか、「NSP を追加」をクリックしてください。変換はすべてこの Mac 上で行われます。正当に所有しているゲームのみ変換してください。"
+  zh-Hans: "把 .nsp 文件拖进窗口，或点击“添加 NSP”。所有转换都在本机完成，请仅转换你合法拥有的游戏。"
+home_welcome_title:
+  en: "Convert NSP to NUP"
+  ja: "NSP を NUP に変換"
+  zh-Hans: "把 NSP 转换成 NUP"
+import_add_games:
+  en: "Add %{1} Games"
+  ja: "%{1} 本のゲームを追加"
+  zh-Hans: "添加 %{1} 个游戏"
+import_add_games_one:
+  en: "Add 1 Game"
+import_attach_existing:
+  en: "add to existing game"
+  ja: "既存のゲームに追加"
+  zh-Hans: "添加到已有游戏"
+import_found:
+  en: "Found %{1}"
+  ja: "%{1} が見つかりました"
+  zh-Hans: "找到 %{1}"
+import_found_in:
+  en: "Found %{2} in “%{1}”"
+  ja: "“%{1}”で %{2} が見つかりました"
+  zh-Hans: "在“%{1}”中找到 %{2}"
+import_identifying:
+  en: "Identifying NSP Files…"
+  ja: "NSP を識別中…"
+  zh-Hans: "正在识别 NSP…"
+import_none:
+  en: "No games to add were found"
+  ja: "追加できるゲームが見つかりません"
+  zh-Hans: "没有找到可添加的游戏"
+import_none_in:
+  en: "No games to add were found in “%{1}”"
+  ja: "“%{1}”に追加できるゲームが見つかりません"
+  zh-Hans: "在“%{1}”中没有找到可添加的游戏"
+import_skipped_files:
+  en: "%{1} files skipped"
+  ja: "%{1} 個のファイルをスキップ"
+  zh-Hans: "已跳过 %{1} 个文件"
+import_skipped_files_one:
+  en: "1 file skipped"
+keys_choose_file:
+  en: "Choose File…"
+  ja: "ファイルを選択…"
+  zh-Hans: "选择文件…"
+keys_choose_prod_message:
+  en: "Choose your own prod.keys file"
+  ja: "ご自身の prod.keys ファイルを選択してください"
+  zh-Hans: "选择你自己的 prod.keys 文件"
+keys_choose_title_message:
+  en: "Choose your own title.keys file"
+  ja: "ご自身の title.keys ファイルを選択してください"
+  zh-Hans: "选择你自己的 title.keys 文件"
+keys_drop_prod:
+  en: "Drop prod.keys here"
+  ja: "ここに prod.keys をドロップ"
+  zh-Hans: "将 prod.keys 拖到这里"
+keys_drop_title:
+  en: "Drop title.keys here (optional)"
+  ja: "ここに title.keys をドロップ（任意）"
+  zh-Hans: "将 title.keys 拖到这里（可选）"
+keys_ignored_entries:
+  en: "Some entries are malformed and were ignored: %{1}. Keys used for conversion are not affected."
+  ja: "形式が正しくない項目を無視しました：%{1}。変換に使うキーには影響しません。"
+  zh-Hans: "有条目格式不正确，已忽略：%{1}。转换用到的 key 不受影响。"
+keys_ignored_entries_more:
+  en: "Some entries are malformed and were ignored: %{1} and %{2} more in total. Keys used for conversion are not affected."
+  ja: "形式が正しくない項目を無視しました：%{1} など全 %{2} 個。変換に使うキーには影響しません。"
+  zh-Hans: "有条目格式不正确，已忽略：%{1} 等 %{2} 个。转换用到的 key 不受影响。"
+keys_privacy:
+  en: "The app only remembers the file location and checks its format. It never copies or uploads the file, and never shows key values in logs."
+  ja: "App はファイルの場所を記憶し形式を確認するだけです。コピーやアップロードは行わず、ログにキーの値を表示することもありません。"
+  zh-Hans: "App 只记住文件位置并校验格式；不会复制、上传，也不会在日志中显示 key 值。"
+keys_problem_missing:
+  en: "Missing %{1}"
+  ja: "%{1} がありません"
+  zh-Hans: "缺少 %{1}"
+keys_problem_unreadable:
+  en: "No keys were found in this file. Make sure you chose prod.keys."
+  ja: "ファイルにキーが見つかりません。prod.keys を選択したか確認してください。"
+  zh-Hans: "没有在文件中找到任何 key，请确认选择的是 prod.keys。"
+keys_remove_message:
+  en: "The app only forgets where the file is; the file isn't deleted. Without it, game info can't be read and games can't be converted."
+  ja: "App がファイルの場所を忘れるだけで、ファイルは削除されません。削除後はゲーム情報の読み込みと変換ができなくなります。"
+  zh-Hans: "只会让 App 忘记这个文件的位置，不会删除文件。移除后将无法读取游戏信息和转换。"
+keys_remove_prod:
+  en: "Remove prod.keys…"
+  ja: "prod.keys を削除…"
+  zh-Hans: "移除 prod.keys…"
+keys_remove_title:
+  en: "Remove prod.keys?"
+  ja: "prod.keys を削除しますか？"
+  zh-Hans: "移除 prod.keys？"
+keys_section_prod:
+  en: "PROD.KEYS (REQUIRED)"
+  ja: "PROD.KEYS（必須）"
+  zh-Hans: "PROD.KEYS（必需）"
+keys_section_title:
+  en: "TITLE.KEYS (OPTIONAL)"
+  ja: "TITLE.KEYS（任意）"
+  zh-Hans: "TITLE.KEYS（可选）"
+keys_sheet_message:
+  en: "Converting requires prod.keys dumped from your own Switch. The app doesn't include it."
+  ja: "変換には、ご自身の Switch から取り出した prod.keys が必要です。App には含まれていません。"
+  zh-Hans: "转换需要从你自己的 Switch 主机导出的 prod.keys，App 不提供该文件。"
+keys_title_note:
+  en: "Not needed when the NSP's own tickets (.tik) can be used. title.keys is needed when the ticket is a personalized one from a console, or when the NSP has no ticket."
+  ja: "NSP 内のチケット（.tik）が使える場合は不要です。チケットが本体から取り出した個人用のものである場合や、NSP にチケットがない場合は title.keys で復号します。"
+  zh-Hans: "NSP 中的 .tik 可以直接使用时不需要它；.tik 是从主机导出的个人化 ticket，或 NSP 中没有 .tik 时，需要用 title.keys 解密。"
+keys_validation_ignored:
+  en: "(%{1} malformed entries ignored)"
+  ja: "（形式が正しくない %{1} 項目を無視）"
+  zh-Hans: "（%{1} 个条目格式不正确，已忽略）"
+keys_validation_ignored_one:
+  en: "(1 malformed entry ignored)"
+keys_validation_is_title_keys:
+  en: "This is title.keys. Put it below."
+  ja: "これは title.keys です。下に追加してください"
+  zh-Hans: "这是 title.keys，请放到下方"
+keys_validation_none:
+  en: "No file chosen"
+  ja: "ファイルが選択されていません"
+  zh-Hans: "尚未选择文件"
+keys_validation_not_prod:
+  en: "Unrecognized: this isn't a prod.keys file"
+  ja: "認識できません：prod.keys ファイルではありません"
+  zh-Hans: "无法识别：这不是 prod.keys 文件"
+keys_validation_not_title:
+  en: "Unrecognized: this isn't a title.keys file"
+  ja: "認識できません：title.keys ファイルではありません"
+  zh-Hans: "无法识别：这不是 title.keys 文件"
+keys_validation_valid:
+  en: "Valid · %{1}"
+  ja: "有効 · %{1}"
+  zh-Hans: "有效 · %{1}"
+language_restart_busy:
+  en: "A conversion is in progress. Restart the app after it finishes."
+  ja: "変換中です。完了してから App を再起動してください。"
+  zh-Hans: "正在转换，请在转换完成后重新启动 App。"
+language_restart_later:
+  en: "Later"
+  ja: "あとで"
+  zh-Hans: "稍后"
+language_restart_message:
+  en: "The new language is used after the app restarts."
+  ja: "再起動すると新しい言語で表示されます。"
+  zh-Hans: "重新启动后将使用新的语言。"
+language_restart_now:
+  en: "Restart Now"
+  ja: "今すぐ再起動"
+  zh-Hans: "立即重新启动"
+language_restart_title:
+  en: "Restart NSPtoNUP to Change the Language"
+  ja: "言語を変更するには NSPtoNUP を再起動してください"
+  zh-Hans: "需要重新启动 NSPtoNUP 才能切换语言"
+list_and:
+  en: " and "
+  ja: "と"
+  zh-Hans: " 和 "
+list_separator:
+  en: ", "
+  ja: "、"
+  zh-Hans: "、"
+localized_add_language:
+  en: "Add Language"
+  ja: "言語を追加"
+  zh-Hans: "添加语言"
+localized_empty:
+  en: "When none are set, every language shows the Name above."
+  ja: "未設定の場合、すべての言語で上の「名前」が表示されます。"
+  zh-Hans: "未设置时，所有语言都显示上方的“名称”。"
+localized_field_placeholder:
+  en: "Name in %{1}"
+  ja: "%{1} の名前"
+  zh-Hans: "%{1}名称"
+localized_help_example:
+  en: "Example"
+  ja: "例"
+  zh-Hans: "示例"
+localized_help_example_name:
+  en: "Name"
+  ja: "名前"
+  zh-Hans: "名称"
+localized_help_message:
+  en: "Show a different game name on systems set to other languages. The names are written into the NUP. Languages without a name show the Name above."
+  ja: "システムの言語ごとに異なるゲーム名を表示します。名前は NUP に書き込まれます。設定していない言語では上の「名前」が表示されます。"
+  zh-Hans: "为不同语言的系统显示不同的游戏名称，会写入 NUP。没有设置的语言显示上方的“名称”。"
+localized_help_tip:
+  en: "Click Add Language to choose a language, then enter the name for it."
+  ja: "「言語を追加」で言語を選んでから、その言語での名前を入力してください。"
+  zh-Hans: "点“添加语言”选择语言，再填写该语言下的名称。"
+localized_help_tooltip:
+  en: "What are localized names?"
+  ja: "ローカライズ名とは？"
+  zh-Hans: "什么是本地化名称？"
+localized_remove_tooltip:
+  en: "Remove %{1}"
+  ja: "%{1} を削除"
+  zh-Hans: "移除%{1}"
+log_cancelled:
+  en: "Cancelled"
+  ja: "キャンセルしました"
+  zh-Hans: "已取消"
+log_copied:
+  en: "Copied"
+  ja: "コピーしました"
+  zh-Hans: "已复制"
+log_copy:
+  en: "Copy Log"
+  ja: "ログをコピー"
+  zh-Hans: "复制日志"
+log_download:
+  en: "Download Log…"
+  ja: "ログをダウンロード…"
+  zh-Hans: "下载日志…"
+log_empty:
+  en: "No conversions yet"
+  ja: "変換の記録はまだありません"
+  zh-Hans: "还没有转换记录"
+log_file_name:
+  en: "%{1} Conversion Log %{2}"
+  ja: "%{1} 変換ログ %{2}"
+  zh-Hans: "%{1} 转换日志 %{2}"
+log_generated:
+  en: "✔ Created %{1}"
+  ja: "✔ 作成しました：%{1}"
+  zh-Hans: "✔ 已生成 %{1}"
+log_part_base:
+  en: "Base %{1}"
+  ja: "本体 %{1}"
+  zh-Hans: "本体 %{1}"
+log_part_dlc:
+  en: "DLC %{1}"
+  ja: "DLC %{1}"
+  zh-Hans: "DLC %{1}"
+log_part_files:
+  en: "%{2}: %{1} files"
+  ja: "%{2}：%{1} ファイル"
+  zh-Hans: "%{2}：%{1} 个文件"
+log_part_files_one:
+  en: "%{2}: %{1} file"
+log_part_update:
+  en: "Update v%{1} %{2}"
+  ja: "アップデート v%{1} %{2}"
+  zh-Hans: "更新 v%{1} %{2}"
+log_save_failed_title:
+  en: "Couldn't Save the Log"
+  ja: "ログを保存できませんでした"
+  zh-Hans: "无法保存日志"
+log_title:
+  en: "Conversion Log — %{1}"
+  ja: "変換ログ — %{1}"
+  zh-Hans: "转换日志 — %{1}"
+menu_about:
+  en: "About %{1}"
+  ja: "%{1} について"
+  zh-Hans: "关于 %{1}"
+menu_add_contents:
+  en: "Add Update or DLC…"
+  ja: "アップデートまたは DLC を追加…"
+  zh-Hans: "添加更新或 DLC…"
+menu_add_nsp:
+  en: "Add NSP…"
+  ja: "NSP を追加…"
+  zh-Hans: "添加 NSP…"
+menu_bring_all_to_front:
+  en: "Bring All to Front"
+  ja: "すべてを手前に移動"
+  zh-Hans: "前置全部窗口"
+menu_choose_cover:
+  en: "Choose Cover Image…"
+  ja: "カバー画像を選択…"
+  zh-Hans: "选择封面图…"
+menu_close_window:
+  en: "Close Window"
+  ja: "ウインドウを閉じる"
+  zh-Hans: "关闭窗口"
+menu_convert:
+  en: "Convert"
+  ja: "変換"
+  zh-Hans: "转换"
+menu_convert_all:
+  en: "Convert All"
+  ja: "すべて変換"
+  zh-Hans: "转换全部"
+menu_copy:
+  en: "Copy"
+  ja: "コピー"
+  zh-Hans: "拷贝"
+menu_cut:
+  en: "Cut"
+  ja: "カット"
+  zh-Hans: "剪切"
+menu_delete_game:
+  en: "Delete Game…"
+  ja: "ゲームを削除…"
+  zh-Hans: "删除游戏…"
+menu_edit:
+  en: "Edit"
+  ja: "編集"
+  zh-Hans: "编辑"
+menu_edit_info:
+  en: "Edit Info…"
+  ja: "情報を編集…"
+  zh-Hans: "编辑信息…"
+menu_file:
+  en: "File"
+  ja: "ファイル"
+  zh-Hans: "文件"
+menu_hide:
+  en: "Hide %{1}"
+  ja: "%{1} を隠す"
+  zh-Hans: "隐藏 %{1}"
+menu_hide_others:
+  en: "Hide Others"
+  ja: "ほかを隠す"
+  zh-Hans: "隐藏其他"
+menu_minimize:
+  en: "Minimize"
+  ja: "しまう"
+  zh-Hans: "最小化"
+menu_paste:
+  en: "Paste"
+  ja: "ペースト"
+  zh-Hans: "粘贴"
+menu_quit:
+  en: "Quit %{1}"
+  ja: "%{1} を終了"
+  zh-Hans: "退出 %{1}"
+menu_reconvert:
+  en: "Convert Again…"
+  ja: "再変換…"
+  zh-Hans: "重新转换…"
+menu_redo:
+  en: "Redo"
+  ja: "やり直す"
+  zh-Hans: "重做"
+menu_redownload_cover:
+  en: "Download Cover Again"
+  ja: "カバーを再ダウンロード"
+  zh-Hans: "重新下载封面"
+menu_reload_info:
+  en: "Read Game Info Again"
+  ja: "ゲーム情報を再読み込み"
+  zh-Hans: "重新读取游戏信息"
+menu_remove_from_queue:
+  en: "Remove from Queue"
+  ja: "キューから外す"
+  zh-Hans: "移出队列"
+menu_reveal_nsp:
+  en: "Show NSP in Finder"
+  ja: "NSP を Finder に表示"
+  zh-Hans: "在 Finder 中显示 NSP"
+menu_reveal_nup:
+  en: "Show NUP in Finder"
+  ja: "NUP を Finder に表示"
+  zh-Hans: "在 Finder 中显示 NUP"
+menu_select_all:
+  en: "Select All"
+  ja: "すべてを選択"
+  zh-Hans: "全选"
+menu_settings:
+  en: "Settings…"
+  ja: "設定…"
+  zh-Hans: "设置…"
+menu_show_all:
+  en: "Show All"
+  ja: "すべてを表示"
+  zh-Hans: "全部显示"
+menu_show_details:
+  en: "Show Game Details…"
+  ja: "ゲームの詳細を表示…"
+  zh-Hans: "查看游戏详情…"
+menu_show_log:
+  en: "Show Log"
+  ja: "ログを表示"
+  zh-Hans: "查看日志"
+menu_stop:
+  en: "Stop"
+  ja: "中止"
+  zh-Hans: "停止"
+menu_stop_conversion:
+  en: "Stop Converting…"
+  ja: "変換を中止…"
+  zh-Hans: "停止转换…"
+menu_undo:
+  en: "Undo"
+  ja: "取り消す"
+  zh-Hans: "撤销"
+menu_view:
+  en: "View"
+  ja: "表示"
+  zh-Hans: "显示"
+menu_window:
+  en: "Window"
+  ja: "ウインドウ"
+  zh-Hans: "窗口"
+menu_zoom:
+  en: "Zoom"
+  ja: "拡大/縮小"
+  zh-Hans: "缩放"
+notification_done_body:
+  en: "Created the NUP for “%{1}”"
+  ja: "“%{1}”の NUP を作成しました"
+  zh-Hans: "“%{1}”已生成 NUP"
+notification_done_title:
+  en: "Conversion complete"
+  ja: "変換が完了しました"
+  zh-Hans: "转换完成"
+notification_failed_body:
+  en: "“%{1}”: %{2}"
+  ja: "“%{1}”：%{2}"
+  zh-Hans: "“%{1}”：%{2}"
+notification_failed_title:
+  en: "Conversion failed"
+  ja: "変換に失敗しました"
+  zh-Hans: "转换失败"
+nup_missing_message:
+  en: "The file may have been moved or deleted:\n%{1}"
+  ja: "ファイルが移動または削除された可能性があります：\n%{1}"
+  zh-Hans: "文件可能已被移动或删除：\n%{1}"
+nup_missing_title:
+  en: "The NUP for “%{1}” Wasn't Found"
+  ja: "“%{1}”の NUP ファイルが見つかりません"
+  zh-Hans: "找不到“%{1}”的 NUP 文件"
+nxpatch_error_bad_cnmt:
+  en: "The content metadata is damaged"
+  ja: "コンテンツメタデータが破損しています"
+  zh-Hans: "内容元数据已损坏"
+nxpatch_error_control_nca_not_found:
+  en: "No Control NCA was found"
+  ja: "Control NCA が見つかりません"
+  zh-Hans: "没有找到 Control NCA"
+nxpatch_error_data_nca_not_found:
+  en: "No data NCA was found in the DLC"
+  ja: "DLC にデータ NCA が見つかりません"
+  zh-Hans: "DLC 中没有找到数据 NCA"
+nxpatch_error_dlc_mismatch:
+  en: "%{1} is not DLC for this game"
+  ja: "%{1} はこのゲームの DLC ではありません"
+  zh-Hans: "%{1} 不是这个游戏的 DLC"
+nxpatch_error_invalid_nsp:
+  en: "Not a valid NSP file"
+  ja: "有効な NSP ファイルではありません"
+  zh-Hans: "不是有效的 NSP 文件"
+nxpatch_error_missing_key:
+  en: "prod.keys is missing %{1}. Use prod.keys that match the game's firmware version."
+  ja: "prod.keys に %{1} がありません。ゲームのファームウェアに合った prod.keys を使用してください。"
+  zh-Hans: "prod.keys 缺少解密所需的 key（%{1}），请使用与游戏版本匹配的 prod.keys"
+nxpatch_error_missing_title_key:
+  en: "No title key: the NSP has no usable common ticket and title.keys has no entry (rights ID %{1})"
+  ja: "title key がありません：NSP に使用できる共通チケットがなく、title.keys にも見つかりません（Rights ID %{1}）"
+  zh-Hans: "缺少 title key：NSP 中没有可用的通用 .tik，title.keys 中也没有（Rights ID %{1}）"
+nxpatch_error_no_cnmt:
+  en: "No content metadata (cnmt) was found in the NSP"
+  ja: "NSP にコンテンツメタデータ（cnmt）が見つかりません"
+  zh-Hans: "NSP 中没有找到内容元数据（cnmt）"
+nxpatch_error_not_base_dlc:
+  en: "This is DLC. Add the base game instead."
+  ja: "これは DLC です。ゲーム本体を追加してください。"
+  zh-Hans: "这是 DLC，请添加游戏本体"
+nxpatch_error_not_base_update:
+  en: "This is an update. Add the base game instead."
+  ja: "これはアップデートです。ゲーム本体を追加してください。"
+  zh-Hans: "这是更新补丁，请添加游戏本体"
+nxpatch_error_nsz_unsupported:
+  en: "This is an NSZ package. Decompress it to NSP first."
+  ja: "NSZ 圧縮ファイルです。先に NSP に展開してください。"
+  zh-Hans: "这是 NSZ 压缩包，请先解压为 NSP"
+nxpatch_error_program_nca_not_found:
+  en: "No Program NCA was found. This NSP may not be a base game."
+  ja: "Program NCA が見つかりません。この NSP はゲーム本体ではない可能性があります。"
+  zh-Hans: "没有找到 Program NCA，这个 NSP 可能不是游戏本体"
+nxpatch_error_unsupported_type:
+  en: "Unsupported content type (only base games, updates and DLC are supported)"
+  ja: "未対応のコンテンツです（ゲーム本体・アップデート・DLC のみ対応）"
+  zh-Hans: "不支持的内容类型（只支持游戏本体、更新与 DLC）"
+nxpatch_error_update_mismatch:
+  en: "%{1} is not an update for this game"
+  ja: "%{1} はこのゲームのアップデートではありません"
+  zh-Hans: "%{1} 不是这个游戏的更新"
+queue_clear:
+  en: "Clear"
+  ja: "消去"
+  zh-Hans: "清除"
+queue_clear_tooltip:
+  en: "Clear recently finished items from the list (logs remain available)"
+  ja: "最近完了した項目をリストから消去します（ログは引き続き表示できます）"
+  zh-Hans: "从列表中清除最近完成的记录（日志仍可查看）"
+queue_empty:
+  en: "No conversions"
+  ja: "変換タスクはありません"
+  zh-Hans: "没有转换任务"
+queue_recent:
+  en: "Recently Finished"
+  ja: "最近完了"
+  zh-Hans: "最近完成"
+queue_start_all:
+  en: "Start All"
+  ja: "すべて開始"
+  zh-Hans: "全部开始"
+queue_start_all_count:
+  en: "Start All (%{1})"
+  ja: "すべて開始（%{1}）"
+  zh-Hans: "全部开始（%{1}）"
+queue_title:
+  en: "Conversion Queue"
+  ja: "変換キュー"
+  zh-Hans: "转换队列"
+quit_confirm_message:
+  en: "Quitting cancels the current conversion."
+  ja: "終了すると現在の変換はキャンセルされます。"
+  zh-Hans: "退出会取消当前转换。"
+quit_confirm_title:
+  en: "A Conversion Is in Progress. Quit Anyway?"
+  ja: "変換中です。終了しますか？"
+  zh-Hans: "正在转换，确定要退出吗？"
+section_basic_info:
+  en: "Basic Info"
+  ja: "基本情報"
+  zh-Hans: "基本信息"
+section_contents:
+  en: "Updates & DLC"
+  ja: "アップデートと DLC"
+  zh-Hans: "更新与 DLC"
+section_localized_names:
+  en: "Localized Names"
+  ja: "ローカライズ名"
+  zh-Hans: "本地化名称"
+sentence_join:
+  en: " "
+  ja: ""
+  zh-Hans: ""
+settings_auto_cover:
+  en: "Download 16:9 Covers by Title ID"
+  ja: "Title ID から 16:9 のカバーを自動ダウンロード"
+  zh-Hans: "按 Title ID 自动下载 16:9 封面"
+settings_auto_cover_note:
+  en: "Source: nlib.cc. The cover is also used as the NUP icon. If none is found, you can add an image in Edit Info; images that aren't 16:9 are cropped to the center."
+  ja: "取得元：nlib.cc。カバーは NUP のアイコンにも使われます。見つからない場合は「情報を編集」で画像を追加できます。16:9 以外の画像は中央でトリミングされます。"
+  zh-Hans: "来源：nlib.cc。封面同时作为 NUP 的图标；找不到时，可以在“编辑信息”中手动添加图片，非 16:9 的图片会自动居中裁剪。"
+settings_cleanup:
+  en: "Delete Temporary Files After Conversion"
+  ja: "変換後に一時ファイルを削除"
+  zh-Hans: "转换完成后清理临时文件"
+settings_cleanup_note:
+  en: "Temporary files are in %{1}"
+  ja: "一時ファイルの場所：%{1}"
+  zh-Hans: "临时文件位于 %{1}"
+settings_key_count:
+  en: "%{1} keys"
+  ja: "%{1} 個のキー"
+  zh-Hans: "%{1} 个 key"
+settings_key_count_one:
+  en: "1 key"
+settings_keys_footnote:
+  en: "prod.keys and title.keys are not included. Dump them from your own Switch. title.keys isn't needed when the NSP's own tickets (.tik) can be used. The app only remembers the file location and checks its format; it never copies or uploads the files, and never shows key values in logs."
+  ja: "prod.keys と title.keys は App に含まれていません。ご自身の Switch から取り出してください。NSP 内のチケット（.tik）が使える場合、title.keys は不要です。App はファイルの場所を記憶し形式を確認するだけで、コピーやアップロードは行わず、ログにキーの値を表示することもありません。"
+  zh-Hans: "App 不提供 prod.keys 与 title.keys，请从你自己的 Switch 主机导出。NSP 中的 .tik 可以直接使用时不需要 title.keys。App 只记住文件位置并校验格式；不会复制、上传，也不会在日志中显示 key 值。"
+settings_keys_incomplete:
+  en: "Incomplete"
+  ja: "不完全"
+  zh-Hans: "不完整"
+settings_language:
+  en: "Language"
+  ja: "言語"
+  zh-Hans: "语言"
+settings_language_note:
+  en: "System Default uses your first preferred language; other languages are shown in English."
+  ja: "「システムに従う」では最優先の言語を使います。対応していない言語の場合は英語で表示します。"
+  zh-Hans: "跟随系统时使用系统的首选语言；不支持的语言显示为英文。"
+settings_language_system:
+  en: "System Default"
+  ja: "システムに従う"
+  zh-Hans: "跟随系统"
+settings_not_added:
+  en: "Not added"
+  ja: "未追加"
+  zh-Hans: "未添加"
+settings_not_added_yet:
+  en: "Not added yet"
+  ja: "まだ追加されていません"
+  zh-Hans: "尚未添加"
+settings_not_configured:
+  en: "Not set up"
+  ja: "未設定"
+  zh-Hans: "未配置"
+settings_notify:
+  en: "Notify When Conversion Finishes"
+  ja: "変換完了時に通知"
+  zh-Hans: "转换完成后发送通知"
+settings_notify_note:
+  en: "Click the notification to show the NUP in Finder."
+  ja: "通知をクリックすると、作成した NUP を Finder に表示します。"
+  zh-Hans: "点击通知即可在 Finder 中显示生成的 NUP。"
+settings_output:
+  en: "Output Folder"
+  ja: "出力先フォルダ"
+  zh-Hans: "输出目录"
+settings_shortcuts:
+  en: "Switch Categories with Shortcuts"
+  ja: "ショートカットでカテゴリを切り替え"
+  zh-Hans: "使用快捷键切换游戏分类"
+settings_shortcuts_note:
+  en: "When on, ⌘1–⌘4 switch to All / Done / Failed / Converting."
+  ja: "オンにすると、⌘1〜⌘4 で すべて／完了／失敗／変換中 に切り替えます。"
+  zh-Hans: "开启后，⌘1–⌘4 分别切换到 全部 / 已完成 / 失败 / 转换中。"
+settings_tab_cover:
+  en: "Cover"
+  ja: "カバー"
+  zh-Hans: "封面"
+settings_tab_general:
+  en: "General"
+  ja: "一般"
+  zh-Hans: "通用"
+settings_tab_keys:
+  en: "Keys"
+  ja: "キー"
+  zh-Hans: "密钥"
+settings_tab_tools:
+  en: "Tools"
+  ja: "ツール"
+  zh-Hans: "工具"
+settings_title:
+  en: "Settings"
+  ja: "設定"
+  zh-Hans: "设置"
+settings_title_keys:
+  en: "title.keys (Optional)"
+  ja: "title.keys（任意）"
+  zh-Hans: "title.keys（可选）"
+settings_title_keys_note:
+  en: "Needed when the NSP has no usable ticket (.tik)"
+  ja: "NSP に使用できるチケット（.tik）がない場合に必要です"
+  zh-Hans: "NSP 中没有可用的 .tik 时需要"
+settings_tool_bundled:
+  en: "Bundled"
+  ja: "内蔵"
+  zh-Hans: "已内置"
+settings_tool_missing:
+  en: "Missing"
+  ja: "見つかりません"
+  zh-Hans: "缺失"
+settings_tool_nup:
+  en: "Packs NUP · github.com/a55uka/nup"
+  ja: "NUP をパック · github.com/a55uka/nup"
+  zh-Hans: "打包 NUP · github.com/a55uka/nup"
+settings_tool_nxpatch:
+  en: "Reads and decrypts NSP (base, updates, DLC) · built on LibHac (tools/nxpatch)"
+  ja: "NSP の読み込みと復号（本体・アップデート・DLC）· LibHac ベース（tools/nxpatch）"
+  zh-Hans: "读取与解密 NSP（本体、更新、DLC）· 基于 LibHac（tools/nxpatch）"
+skip_already_in_library:
+  en: "Already in the library"
+  ja: "すでにライブラリにあります"
+  zh-Hans: "已在游戏库中"
+skip_base_not_found:
+  en: "The base game wasn't found"
+  ja: "対応するゲーム本体が見つかりません"
+  zh-Hans: "找不到对应的游戏本体"
+skip_dlc_already_added:
+  en: "This DLC is already added"
+  ja: "この DLC は追加済みです"
+  zh-Hans: "这个 DLC 已添加"
+skip_duplicate_base:
+  en: "Duplicate base game"
+  ja: "ゲーム本体が重複しています"
+  zh-Hans: "重复的游戏本体"
+skip_game_in_library:
+  en: "This game is already in the library"
+  ja: "このゲームはすでにライブラリにあります"
+  zh-Hans: "这个游戏已在游戏库中"
+skip_newer_version_exists:
+  en: "A newer version is already included"
+  ja: "より新しいバージョンがあります"
+  zh-Hans: "已有更新的版本"
+skip_not_nsp:
+  en: "Not an .nsp file"
+  ja: ".nsp ファイルではありません"
+  zh-Hans: "不是 .nsp 文件"
+skipped_files_title:
+  en: "%{1} files were skipped"
+  ja: "%{1} 個のファイルをスキップしました"
+  zh-Hans: "有 %{1} 个文件已跳过"
+skipped_files_title_one:
+  en: "1 file was skipped"
+status_cancelled:
+  en: "Cancelled"
+  ja: "キャンセル済み"
+  zh-Hans: "已取消"
+status_done:
+  en: "Done"
+  ja: "完了"
+  zh-Hans: "已完成"
+status_failed:
+  en: "Failed"
+  ja: "失敗"
+  zh-Hans: "失败"
+status_waiting:
+  en: "Waiting"
+  ja: "待機中"
+  zh-Hans: "等待转换"
+step_cover:
+  en: "Prepare cover"
+  ja: "カバー画像を準備"
+  zh-Hans: "准备封面图"
+step_cover_downloaded:
+  en: "Downloaded automatically"
+  ja: "自動でダウンロードしました"
+  zh-Hans: "已自动下载"
+step_cover_existing:
+  en: "Using existing cover"
+  ja: "既存のカバーを使用"
+  zh-Hans: "使用已有封面"
+step_cover_not_found:
+  en: "No cover found, skipped"
+  ja: "カバーが見つからないためスキップ"
+  zh-Hans: "未找到封面，已跳过"
+step_cover_not_set:
+  en: "No cover set, skipped"
+  ja: "カバー未設定のためスキップ"
+  zh-Hans: "未设置封面，已跳过"
+step_cover_short:
+  en: "Cover"
+  ja: "カバー"
+  zh-Hans: "封面"
+step_extract:
+  en: "Extract exefs / romfs"
+  ja: "exefs / romfs を抽出"
+  zh-Hans: "提取 exefs / romfs"
+step_extract_short:
+  en: "Extract"
+  ja: "抽出"
+  zh-Hans: "提取"
+step_identify:
+  en: "Identify content"
+  ja: "コンテンツを識別"
+  zh-Hans: "识别内容"
+step_identify_detail_base:
+  en: "Base %{1}"
+  ja: "本体 %{1}"
+  zh-Hans: "本体 %{1}"
+step_identify_detail_update:
+  en: "Update v%{1}"
+  ja: "アップデート v%{1}"
+  zh-Hans: "更新 v%{1}"
+step_identify_short:
+  en: "Identify"
+  ja: "識別"
+  zh-Hans: "识别"
+step_metadata:
+  en: "Read game info"
+  ja: "ゲーム情報を読み込み"
+  zh-Hans: "读取游戏信息"
+step_metadata_short:
+  en: "Info"
+  ja: "情報"
+  zh-Hans: "读取信息"
+step_pack:
+  en: "Pack NUP"
+  ja: "NUP をパック"
+  zh-Hans: "打包 NUP"
+step_pack_short:
+  en: "Pack"
+  ja: "パック"
+  zh-Hans: "打包"
+trash_failed_game_kept:
+  en: "The game is still in the list."
+  ja: "ゲームはリストに残っています。"
+  zh-Hans: "游戏仍保留在列表中。"
+trash_failed_title:
+  en: "Couldn't Move Files to the Trash"
+  ja: "ファイルをゴミ箱に入れられませんでした"
+  zh-Hans: "无法将文件移到废纸篓"
+warning_cover_not_found:
+  en: "No cover found, so the NUP has no icon. Add an image and convert again."
+  ja: "カバーが見つからないため、NUP にアイコンは含まれません。画像を追加して再変換できます。"
+  zh-Hans: "未找到封面，NUP 中不包含图标。可添加图片后重新转换。"
+warning_cover_not_set:
+  en: "No cover set, so the NUP has no icon."
+  ja: "カバーが設定されていないため、NUP にアイコンは含まれません。"
+  zh-Hans: "未设置封面，NUP 中不包含图标。"
+
+# MARK: - Additional keys
+
+action_ok:
+  en: "OK"
+  ja: "OK"
+  zh-Hans: "好"
+carousel_add_label:
+  en: "Add NSP"
+  ja: "NSP を追加"
+  zh-Hans: "添加 NSP"
+carousel_next_label:
+  en: "Next"
+  ja: "次へ"
+  zh-Hans: "下一个"
+carousel_previous_label:
+  en: "Previous"
+  ja: "前へ"
+  zh-Hans: "上一个"
+cover_status_fetching:
+  en: "Getting cover…"
+  ja: "カバーを取得中…"
+  zh-Hans: "正在获取…"
+delete_move_kind_to_trash:
+  en: "Move %{1} Files to the %{2}"
+  ja: "%{1} ファイルを%{2}に入れる"
+  zh-Hans: "将 %{1} 文件移动到%{2}"
+delete_note_nup:
+  en: "Converted file"
+  ja: "変換で作成したファイル"
+  zh-Hans: "转换生成的文件"
+delete_note_nsp:
+  en: "Original file"
+  ja: "元のファイル"
+  zh-Hans: "原始文件"
+delete_note_nsp_count:
+  en: "Original files, %{1} in total"
+  ja: "元のファイル（計 %{1} 個）"
+  zh-Hans: "原始文件，共 %{1} 个"
+duration_hours:
+  en: "About %{1} hours"
+  ja: "約 %{1} 時間"
+  zh-Hans: "约 %{1} 小时"
+duration_hours_one:
+  en: "About 1 hour"
+error_file_name_invalid:
+  en: "Invalid file name: %{1}"
+  ja: "ファイル名が正しくありません：%{1}"
+  zh-Hans: "文件名无效：%{1}"
+file_manager_finder:
+  en: "Finder"
+  ja: "Finder"
+  zh-Hans: "Finder"
+file_manager_explorer:
+  en: "File Explorer"
+  ja: "エクスプローラー"
+  zh-Hans: "文件资源管理器"
+file_manager_other:
+  en: "the File Manager"
+  ja: "ファイルマネージャー"
+  zh-Hans: "文件管理器"
+home_status_failed:
+  en: "Conversion failed"
+  ja: "変換に失敗しました"
+  zh-Hans: "转换失败"
+image_filter_name:
+  en: "Images"
+  ja: "画像"
+  zh-Hans: "图片"
+log_cover_error:
+  en: "[cover] %{1}"
+  ja: "[cover] %{1}"
+  zh-Hans: "[cover] %{1}"
+output_panel_message:
+  en: "Choose the output folder"
+  ja: "出力先フォルダを選択"
+  zh-Hans: "选择输出目录"
+reveal_in:
+  en: "Show in %{1}"
+  ja: "%{1} で表示"
+  zh-Hans: "在 %{1} 中显示"
+reveal_item_in:
+  en: "Show %{2} in %{1}"
+  ja: "%{2} を %{1} で表示"
+  zh-Hans: "在 %{1} 中显示 %{2}"
+settings_notify_note_in:
+  en: "Click the notification to show the NUP in %{1}."
+  ja: "通知をクリックすると、作成した NUP を %{1} で表示します。"
+  zh-Hans: "点击通知即可在 %{1} 中显示生成的 NUP。"
+settings_platform:
+  en: "Platform: %{1}"
+  ja: "プラットフォーム：%{1}"
+  zh-Hans: "平台：%{1}"
+settings_shortcuts_note_keys:
+  en: "When on, %{1} switch to All / Done / Failed / Converting."
+  ja: "オンにすると、%{1} で すべて / 完了 / 失敗 / 変換中 を切り替えます。"
+  zh-Hans: "开启后，%{1} 分别切换到 全部 / 已完成 / 失败 / 转换中。"
+text_raw:
+  en: "%{1}"
+  ja: "%{1}"
+  zh-Hans: "%{1}"
+text_with_detail:
+  en: "%{1}\n%{2}"
+  ja: "%{1}\n%{2}"
+  zh-Hans: "%{1}\n%{2}"
+trash_failed_title_in:
+  en: "Couldn't Move Files to the %{1}"
+  ja: "ファイルを%{1}に入れられませんでした"
+  zh-Hans: "无法将文件移到%{1}"
+trash_name_trash:
+  en: "Trash"
+  ja: "ゴミ箱"
+  zh-Hans: "废纸篓"
+trash_name_recycle_bin:
+  en: "Recycle Bin"
+  ja: "ごみ箱"
+  zh-Hans: "回收站"
+language_name_zh_hans:
+  en: "Chinese (Simplified)"
+  ja: "中国語（簡体字）"
+  zh-Hans: "简体中文"
+language_name_zh_hant:
+  en: "Chinese (Traditional)"
+  ja: "中国語（繁体字）"
+  zh-Hans: "繁体中文"
+language_name_ja:
+  en: "Japanese"
+  ja: "日本語"
+  zh-Hans: "日语"
+language_name_ko:
+  en: "Korean"
+  ja: "韓国語"
+  zh-Hans: "韩语"
+language_name_en_us:
+  en: "English (US)"
+  ja: "英語（アメリカ）"
+  zh-Hans: "英语（美国）"
+language_name_en_gb:
+  en: "English (UK)"
+  ja: "英語（イギリス）"
+  zh-Hans: "英语（英国）"
+language_name_fr:
+  en: "French"
+  ja: "フランス語"
+  zh-Hans: "法语"
+language_name_fr_ca:
+  en: "French (Canada)"
+  ja: "フランス語（カナダ）"
+  zh-Hans: "法语（加拿大）"
+language_name_de:
+  en: "German"
+  ja: "ドイツ語"
+  zh-Hans: "德语"
+language_name_it:
+  en: "Italian"
+  ja: "イタリア語"
+  zh-Hans: "意大利语"
+language_name_es:
+  en: "Spanish"
+  ja: "スペイン語"
+  zh-Hans: "西班牙语"
+language_name_es_419:
+  en: "Spanish (Latin America)"
+  ja: "スペイン語（ラテンアメリカ）"
+  zh-Hans: "西班牙语（拉丁美洲）"
+language_name_nl:
+  en: "Dutch"
+  ja: "オランダ語"
+  zh-Hans: "荷兰语"
+language_name_pt:
+  en: "Portuguese"
+  ja: "ポルトガル語"
+  zh-Hans: "葡萄牙语"
+language_name_pt_br:
+  en: "Portuguese (Brazil)"
+  ja: "ポルトガル語（ブラジル）"
+  zh-Hans: "葡萄牙语（巴西）"
+language_name_ru:
+  en: "Russian"
+  ja: "ロシア語"
+  zh-Hans: "俄语"

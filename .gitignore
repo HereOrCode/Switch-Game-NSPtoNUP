@@ -1,0 +1,9 @@
+# Keys and game data: never commit
+*.keys
+*.nsp
+*.nsz
+*.nup
+
+.DS_Store
+tools/nxpatch/bin/
+tools/nxpatch/obj/
