@@ -192,6 +192,21 @@ A conversion temporarily needs free space roughly the size of the game. Free up 
 of the output folder, or choose an output folder on another drive. Turn on
 **Settings › General › Delete Temporary Files After Conversion** to clean up automatically.
 
+### NUPs made with 1.0.0 or 1.0.1 show no icon or name in other tools
+
+NSPtoNUP 1.0.0 and 1.0.1 shipped a build of nup that numbered the NUP metadata records one off from
+the [NUP spec](https://github.com/a55uka/nup/blob/meow/SPEC.md), so apps that follow the spec find
+no icon and read the wrong name, version and publisher. 1.0.2 writes them correctly. Convert the
+game again, or fix existing files in place in a few seconds (Python 3, no repacking):
+
+```sh
+python3 fix-nup-tlv.py --dry-run ~/Documents/NSPtoNUP   # check only
+python3 fix-nup-tlv.py ~/Documents/NSPtoNUP             # fix every .nup in the folder
+```
+
+Download [`fix-nup-tlv.py`](NSPtoNUP%20NSH/scripts/fix-nup-tlv.py) from this repository. Files that
+are already correct are skipped.
+
 Still stuck? Open the **Conversion Log** of the game (the list button below the game title) and
 include it when you [open an issue](https://github.com/HereOrCode/Switch-Game-NSPtoNUP/issues).
 

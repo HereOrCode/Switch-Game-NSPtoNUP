@@ -96,7 +96,14 @@ command -v uv >/dev/null || fail "uv not found"
 if [[ ! -d "${WORK}/nup/.git" ]]; then
   git clone -q https://github.com/a55uka/nup "${WORK}/nup"
 fi
-git -C "${WORK}/nup" -c advice.detachedHead=false checkout -q "$NUP_REF"
+git -C "${WORK}/nup" -c advice.detachedHead=false checkout -q -f "$NUP_REF"
+# Fix the meta TLV numbering: upstream 1d904e1 made it start at 0 (NPDM = 0), but SPEC §5 starts at 0x0001
+# (icon 0x0003, name 0x0005), so every record is off by one and spec readers find no icon or name.
+# Skipped automatically once upstream fixes it
+FORMAT_PY="${WORK}/nup/tools/nup/nup/format.py"
+perl -pi -e 's/^    NPDM = 0\r?$/    NPDM = 1/' "$FORMAT_PY"
+grep -q '^    NPDM = 1' "$FORMAT_PY" || grep -q '^TLV_NPDM = 0x0001' "$FORMAT_PY" \
+  || fail "Can't confirm the TLV numbering in nup's format.py; check it before building"
 VENV="${WORK}/nup-venv"
 [[ -d "$VENV" ]] || uv venv -q -p 3.13 "$VENV"
 PY="${VENV}/bin/python"; [[ $OS == windows ]] && PY="${VENV}/Scripts/python.exe"
@@ -110,6 +117,14 @@ printf 'from nup.cli import main\nmain()\n' > "${WORK}/run_nup.py"
     run_nup.py >"${WORK}/pyinstaller.log" 2>&1
 ) || { tail -20 "${WORK}/pyinstaller.log" >&2; fail "nup packaging failed"; }
 cp "${WORK}/dist/nup${EXE}" "${OUT}/nup${EXE}"
+# Self-check: the name must land in TLV 0x0005 (type 05 00, reserved 00 00, size 08 00 00 00, then "TLVCHECK")
+CHECK="${WORK}/tlv-check"
+rm -rf "$CHECK"; mkdir -p "${CHECK}/dump/exefs"
+printf 'main' > "${CHECK}/dump/exefs/main"
+"${OUT}/nup${EXE}" pack -q --title-id 0100000000010000 --name TLVCHECK "${CHECK}/dump" "${CHECK}/t.nup" >/dev/null 2>&1 \
+  || fail "nup self-check failed: pack"
+"$PY" -c 'import sys; sys.exit(b"\x05\x00\x00\x00\x08\x00\x00\x00TLVCHECK" not in open(sys.argv[1], "rb").read())' "${CHECK}/t.nup" \
+  || fail "nup self-check failed: the name is not in TLV 0x0005"
 
 chmod 755 "${OUT}"/*
 log "Done: tools/${PLATFORM}/"

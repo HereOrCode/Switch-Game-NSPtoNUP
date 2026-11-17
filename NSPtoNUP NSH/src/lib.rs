@@ -356,10 +356,20 @@ mod e2e {
         println!("output: {}", serde_json::to_string(&output).unwrap());
         assert!(Path::new(&output.nup).is_file());
         assert!(output.nup_size > 100 << 20);
-        // The NUP icon is the game's own 1:1 icon, not the 16:9 cover
+        // The NUP icon is the game's own 1:1 icon, not the 16:9 cover. Records follow SPEC §5 numbering: icon in TLV
+        // 0x0003, name in 0x0005 (upstream nup once shifted every record down by one)
+        let tlv = |kind: u16, payload: &[u8]| {
+            let mut record = kind.to_le_bytes().to_vec();
+            record.extend([0, 0]);
+            record.extend((payload.len() as u32).to_le_bytes());
+            record.extend(payload);
+            record
+        };
+        let contains = |haystack: &[u8], needle: &[u8]| haystack.windows(needle.len()).any(|w| w == needle);
         let icon = std::fs::read(&icon).unwrap();
         let nup = std::fs::read(&output.nup).unwrap();
-        assert!(nup.windows(icon.len()).any(|w| w == icon), "1:1 icon not embedded in the NUP");
+        assert!(contains(&nup, &tlv(0x0003, &icon)), "1:1 icon not in TLV 0x0003");
+        assert!(contains(&nup, &tlv(0x0005, b"Saturn Bomberman")), "name not in TLV 0x0005");
         std::fs::remove_dir_all(&temp).ok();
     }
 }

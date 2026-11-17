@@ -42,6 +42,7 @@ nsh check                        # cargo check + TypeScript type check
 cargo test                       # Rust unit tests
 nsh test App.tsx                 # Rust unit tests + ui/*.test.ts (interface language, translations)
 scripts/check-locales.py         # check interface text: every used key exists, Japanese and Simplified Chinese are complete, parameters match
+scripts/fix-nup-tlv.py <nup|folder>  # fix NUPs made by 1.0.0 / 1.0.1 (meta TLV numbering one off); --dry-run to check only
 ```
 
 `cargo test e2e -- --ignored --nocapture` runs one full conversion; it needs your own `prod.keys`
