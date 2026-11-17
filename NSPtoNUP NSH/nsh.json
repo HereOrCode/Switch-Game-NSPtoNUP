@@ -1,8 +1,8 @@
 {
   "name": "NSPtoNUP",
   "id": "com.hellomateo.nsptonup",
-  "version": "1.0.0",
-  "build": 1,
+  "version": "1.0.1",
+  "build": 2,
   "rust": ".",
   "icon": "assets/app-icon.png",
   "appearance": "dark",
