@@ -356,6 +356,10 @@ mod e2e {
         println!("output: {}", serde_json::to_string(&output).unwrap());
         assert!(Path::new(&output.nup).is_file());
         assert!(output.nup_size > 100 << 20);
+        // The NUP icon is the game's own 1:1 icon, not the 16:9 cover
+        let icon = std::fs::read(&icon).unwrap();
+        let nup = std::fs::read(&output.nup).unwrap();
+        assert!(nup.windows(icon.len()).any(|w| w == icon), "1:1 icon not embedded in the NUP");
         std::fs::remove_dir_all(&temp).ok();
     }
 }

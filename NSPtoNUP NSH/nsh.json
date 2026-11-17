@@ -17,7 +17,7 @@
       "height": 560
     },
     "titleBar": {
-      "style": "hidden",
+      "style": "default",
       "height": 32
     },
     "defaultPosition": "center"

@@ -3,7 +3,7 @@
 
 import { concat, msg, type Msg } from "../i18n";
 import { joinPath, env } from "../native";
-import { contents, coverUrl, failureReason, game, gameWarnings, games, type Game } from "./library";
+import { contents, failureReason, game, gameWarnings, games, type Game } from "./library";
 import { injectMockHistory, injectMockJobs, type LogLine } from "./queue";
 
 const mockId = (titleId: string) => `00000000-0000-4000-8000-${titleId.slice(-12)}`;
@@ -50,7 +50,7 @@ function finishedLog(g: Game): LogLine[] {
   const lines = extractLog(g);
   const warning = gameWarnings(g)[0];
   if (warning) lines.push(msg("log_cover_error", msg("error_cover_not_in_library")));
-  else if (coverUrl(g)) pack.push("--icon", coverUrl(g)!);
+  pack.push("--icon", `…/${work}/control/icon_AmericanEnglish.dat`);
   lines.push(command("nup", pack), command("nup", ["verify", out]), "[nup] verify: OK (deep)", msg("log_generated", out));
   if (warning) lines.push(concat("⚠ ", warning));
   return lines;

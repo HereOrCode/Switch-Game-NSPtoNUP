@@ -236,14 +236,16 @@ impl<'a> Pipeline<'a> {
         for (tag, value) in &localized {
             pack_args.extend(["--lang-name".to_owned(), format!("{tag}={value}")]);
         }
-        if let Some(cover) = &cover {
-            pack_args.extend(["--icon".to_owned(), cover.clone()]);
+        // The NUP icon (TLV 0x0003) is the game's own 1:1 icon (256×256 JPEG, see nup SPEC §5); the 16:9 cover
+        // has no slot in the format and stays in the App
+        if let Some(icon) = &meta.icon {
+            pack_args.extend(["--icon".to_owned(), icon.display().to_string()]);
         }
         // Take the larger of two sources (the UI only moves forward):
         //   ① NUP size written ÷ size of content to pack: uncompressed, so roughly equal; changes steadily
         //   ② the percentage nup reports (by files done): "pack: 23/44 files (52%)"
         // Progress lines are only used for computation, not written to the log
-        let pack_total = directory_size(&dump_dir, false) + cover.as_ref().map(|c| size(Path::new(c))).unwrap_or(0);
+        let pack_total = directory_size(&dump_dir, false) + meta.icon.as_deref().map(size).unwrap_or(0);
         self.measuring(pack_total, || size_allocated(&output), || {
             self.run_tool(Tool::Nup, &pack_args, "error_pack_failed", Some(&|line: &str| {
                 // No compression is expected; keep nup's "zstandard not installed" notice out of the log so it won't

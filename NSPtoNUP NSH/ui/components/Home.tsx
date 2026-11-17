@@ -215,18 +215,20 @@ export function Home() {
     <View style={{ flex: 1, backgroundColor: "#000000" }} onFileDrop={(e: any) => onDrop(e.uris)}>
       <Background image={background()} />
 
-      {/* Top bar: on the same row as the traffic-light buttons; empty space drags the window */}
+      {/* Top bar: with a hidden title bar it shares the row with the traffic-light buttons and its empty space drags the
+          window; with the system title bar (nsh.json, while nsh can't drag hidden-title-bar windows on macOS: longbridge/nsh#2274) it sits
+          below it, aligned with the categories */}
       <View
         desktop={{ windowDrag: true }}
         style={{
           height: 52,
           flexDirection: "row",
           alignItems: "center",
-          paddingLeft: titleBar().left + 12,
+          paddingLeft: Math.max(titleBar().left + 12, 40),
           paddingRight: 20,
         }}
       >
-        <Text style={{ color: WHITE, fontSize: 15, fontWeight: "700", marginTop: -8 }}>
+        <Text style={{ color: WHITE, fontSize: 15, fontWeight: "700", marginTop: titleBar().height ? -8 : 0 }}>
           NSPtoNUP
           <Text style={{ color: white(0.55), fontSize: 11, fontWeight: "400" }}>{`  v${version}`}</Text>
         </Text>
