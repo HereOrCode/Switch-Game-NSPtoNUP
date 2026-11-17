@@ -4,6 +4,9 @@
 *.nsz
 *.nup
 
+# User settings the app writes when run from here (local paths such as the prod.keys location)
+/NSPtoNUP NSH/settings.json
+
 .DS_Store
 tools/nxpatch/bin/
 tools/nxpatch/obj/
